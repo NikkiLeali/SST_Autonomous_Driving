@@ -30,3 +30,5 @@ All data sources should be documented with:
 - Date of access
 
 
+## Test Image URL:
+https://www.istockphoto.com/photo/daytime-interstate-traffic-perspective-gm1361912866-434114689
