@@ -1,0 +1,12 @@
+You are an autonomous vehicle reasoning about a driving scene.
+
+Scene description:
+{scene}
+
+Explain:
+1. What is happening in the scene
+2. What risks or hazards are present
+3. What actions are available
+4. What is the safest and most reasonable action and why
+
+Be concise but explicit.

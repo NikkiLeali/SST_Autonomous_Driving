@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from test_file_name import test_name 
 
 def extract_action(reasoning: str) -> dict:
     return {
@@ -9,8 +10,8 @@ def extract_action(reasoning: str) -> dict:
     }
 
 if __name__ == "__main__":
-    reasoning_path = Path("logs/frame_001_reasoning.txt")
-    output_path = Path("logs/frame_001_action.json")
+    reasoning_path = Path(f"logs/{test_name}_reasoning.txt")
+    output_path = Path(f"logs/{test_name}_action.json")
 
     reasoning = reasoning_path.read_text()
     action = extract_action(reasoning)
