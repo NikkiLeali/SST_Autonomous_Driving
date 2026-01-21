@@ -1,0 +1,26 @@
+{
+  "scene_type": "construction_zone",
+  "road_type": "urban arterial",
+  "objects": [
+    "cars",
+    "construction barrels",
+    "temporary signs"
+  ],
+  "traffic_density": "moderate",
+  "lane_configuration": "right lane closed",
+  "traffic_control": [
+    "cones",
+    "barrels",
+    "temporary lane markers"
+  ],
+  "lane_changes": "merge required",
+  "hazards": [
+    "lane narrowing",
+    "reduced buffer to oncoming traffic"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "approaching reduced speed zone",
+    "lane_position": "closing lane"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "scene_type": "accident_scene",
+  "road_type": "highway",
+  "objects": [
+    "stopped vehicles",
+    "emergency vehicle",
+    "traffic cones"
+  ],
+  "traffic_density": "high",
+  "lane_configuration": "partially blocked",
+  "traffic_control": [
+    "emergency lights",
+    "cones"
+  ],
+  "lane_changes": "possible detour",
+  "hazards": [
+    "sudden stops",
+    "debris",
+    "unpredictable driver behavior"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "decelerating",
+    "lane_position": "right lane"
+  }
+}

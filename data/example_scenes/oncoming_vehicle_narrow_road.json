@@ -1,0 +1,23 @@
+{
+  "scene_type": "narrow_road_encounter",
+  "road_type": "two-lane road",
+  "objects": [
+    "oncoming vehicle",
+    "traffic cones"
+  ],
+  "traffic_density": "low",
+  "lane_configuration": "temporarily narrowed",
+  "traffic_control": [
+    "cones"
+  ],
+  "lane_changes": "shared space",
+  "hazards": [
+    "limited lateral clearance",
+    "oncoming vehicle proximity"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "low",
+    "lane_position": "center"
+  }
+}

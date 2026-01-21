@@ -48,4 +48,5 @@ SST_Autonomous_Driving/
 1. Create a Python virtual environment
 2. Install dependencies from `requirements.txt`
 3. Place videos in `data/raw/videos`
+4. Ensure Ollama is running on a seperate terminal via `ollama serve`
 4. Run scripts in `src/` in pipeline order

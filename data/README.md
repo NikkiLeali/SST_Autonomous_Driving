@@ -5,7 +5,8 @@ This directory contains all data used in the project, organized to support repro
 ---
 
 ## Folder Structure
-
+- `exanple_scenes/`
+  - Vision-To-Text JSON examples for testing reasoning/action LLMs
 - `raw/`
   - Original driving videos (unmodified)
 - `frames/`

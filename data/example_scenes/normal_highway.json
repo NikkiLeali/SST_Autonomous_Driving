@@ -1,0 +1,15 @@
+{
+  "scene_type": "normal_driving",
+  "road_type": "highway",
+  "objects": ["cars"],
+  "traffic_density": "light",
+  "lane_configuration": "multiple lanes, clear markings",
+  "traffic_control": [],
+  "lane_changes": "none",
+  "hazards": [],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "steady",
+    "lane_position": "center lane"
+  }
+}
