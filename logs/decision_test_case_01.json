@@ -1,0 +1,8 @@
+{
+  "scene": "highway driving",
+  "objects": [
+    "cars"
+  ],
+  "conditions": "light traffic",
+  "hazards": []
+}

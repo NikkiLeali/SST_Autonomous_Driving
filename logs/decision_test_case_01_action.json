@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "high",
+  "intent": "To minimize the chances of accidents due to sudden maneuvers, maximize predictability, and maintain a safe distance from other vehicles.",
+  "fallback": "If maintaining speed becomes unsafe due to sudden changes in traffic or road conditions, the vehicle will adjust its speed accordingly while still prioritizing safety."
+}
