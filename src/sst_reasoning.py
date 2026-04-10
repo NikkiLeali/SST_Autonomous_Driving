@@ -2,9 +2,8 @@ import json
 import requests
 from pathlib import Path
 from test_file_name import test_name
+from config import OLLAMA_URL, MODEL_NAME
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL_NAME = "mistral:instruct"
 
 PROMPT_PATH = Path("prompts/sst_reasoning_base_prompt.txt")
 
