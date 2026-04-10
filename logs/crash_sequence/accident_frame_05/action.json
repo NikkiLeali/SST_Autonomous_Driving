@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "Minimizing the risk of additional accidents by reducing speed.",
+  "fallback": "If slowing down is not sufficient to ensure safety, consider stopping or yielding if visibility and traffic conditions allow."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "high",
+  "intent": "Minimize the risk of collisions with debris or damaged vehicles by maintaining a steady course.",
+  "fallback": "Cautiously change lanes if traffic conditions allow it, ensuring safety for both the autonomous vehicle and other vehicles."
+}

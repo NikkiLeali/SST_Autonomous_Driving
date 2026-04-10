@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "high",
+  "intent": "Maintaining speed allows for better reaction to potential hazards and allows other vehicles more room to maneuver.",
+  "fallback": "If the situation deteriorates, the autonomous vehicle would slow down or change lanes if safe to do so."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To comply with traffic rules and minimize risks from other vehicles or pedestrians moving unpredictably.",
+  "fallback": "If the ego-vehicle cannot safely stop at the designated stop line due to an obstruction, it will slow down and attempt to find a suitable alternative path."
+}

@@ -1,0 +1,12 @@
+ 1. In this scene, an autonomous vehicle (ego-vehicle) is stopped at a city street as a pedestrian is crossing the road within a designated crosswalk. The traffic signal is currently red, indicating no vehicles should be moving.
+
+2. Risks or hazards present in the scene include:
+   - A pedestrian is in the roadway (despite being at a marked crosswalk), which could lead to an accident if the vehicle starts moving before the pedestrian has finished crossing.
+   - The traffic signal is red, but the presence of other vehicles on the road may cause them to ignore or disregard the signal, leading to potential collisions with the ego-vehicle.
+
+3. Available actions for the autonomous vehicle include:
+   - Stay stopped and wait for the pedestrian to complete crossing before moving.
+   - Activate emergency braking or maneuver around the pedestrian if there is enough space in the immediate area, while being mindful of other vehicles on the road.
+   - Sound a warning signal (horn) to alert the pedestrian and other drivers about its presence and intention to move.
+
+4. The safest and most reasonable action would be for the ego-vehicle to stay stopped until the pedestrian has completed crossing, then proceed cautiously with an increased awareness of other vehicles on the road. This approach prioritizes safety for both the vehicle occupants and the pedestrian while maintaining compliance with traffic regulations and minimizing risks associated with unpredictable driver behavior.

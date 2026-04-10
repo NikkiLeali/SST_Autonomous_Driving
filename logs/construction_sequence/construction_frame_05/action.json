@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To increase reaction time and respond to the unpredictable motion of the crossing vehicle",
+  "fallback": "If slowing down does not provide enough distance or safety, consider changing lanes (if possible) to avoid the crossing vehicle"
+}

@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To maintain a safe distance from other vehicles and minimize risk of collision due to the accident and potential unpredictable behavior.",
+  "fallback": "If slowing down is not possible due to heavy traffic, the vehicle may attempt to change lanes (if safe) or yield if necessary."
+}

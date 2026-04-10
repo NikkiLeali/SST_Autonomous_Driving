@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "Maintaining a safe distance from the collision area and avoiding potential risks of changing lanes or coming to a complete stop.",
+  "fallback": "Rerouting around the obstruction, if alternative routes are available, or stopping if necessary for safety."
+}

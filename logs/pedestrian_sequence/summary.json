@@ -1,0 +1,37 @@
+[
+  {
+    "frame_id": "pedestrian_frame_01",
+    "scene_type": "signal_controlled_intersection",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To comply with traffic rules and minimize risks from other vehicles or pedestrians moving unpredictably."
+  },
+  {
+    "frame_id": "pedestrian_frame_02",
+    "scene_type": "pedestrian_crossing",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To comply with the traffic signal and prioritize safety by minimizing potential hazards for both the pedestrian and the autonomous vehicle."
+  },
+  {
+    "frame_id": "pedestrian_frame_03",
+    "scene_type": "active_pedestrian_crossing",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "Ensuring safety for both the vehicle occupants and the pedestrian, while maintaining compliance with traffic regulations."
+  },
+  {
+    "frame_id": "pedestrian_frame_04",
+    "scene_type": "signal_conflict",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To ensure safety for both the pedestrian and the autonomous vehicle by giving priority to the pedestrian's right-of-way."
+  },
+  {
+    "frame_id": "pedestrian_frame_05",
+    "scene_type": "post_pedestrian_crossing",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To ensure sufficient reaction time in case any hazards arise and minimize potential collision risks due to variations in pedestrian or vehicular behavior."
+  }
+]

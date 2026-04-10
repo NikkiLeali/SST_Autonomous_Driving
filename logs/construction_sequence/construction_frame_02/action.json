@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Proceeding cautiously by maintaining a moderate speed while monitoring the construction zone for potential hazards.",
+  "fallback": "If necessary to change lanes due to the merge, the vehicle will ensure it is safe to do so before executing the lane change."
+}

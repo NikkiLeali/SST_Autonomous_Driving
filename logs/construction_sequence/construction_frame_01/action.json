@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "To follow traffic rules and prepare for the upcoming construction zone and merge, ensuring safety by respecting other road users.",
+  "fallback": "If necessary, slow down or change lanes cautiously when approaching the construction zone and upcoming merge."
+}

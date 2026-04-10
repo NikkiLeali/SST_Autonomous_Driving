@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To comply with the traffic signal and prioritize safety by minimizing potential hazards for both the pedestrian and the autonomous vehicle.",
+  "fallback": "Monitor other vehicles for signs of rule violations or hazardous behavior, and if necessary, initiate an emergency stop if any immediate danger is detected."
+}

@@ -1,0 +1,26 @@
+{
+  "scene_type": "emerging_hazard",
+  "frame_id": "accident_frame_02",
+  "road_type": "multi-lane highway",
+  "objects": [
+    "cars",
+    "construction barrels"
+  ],
+  "traffic_density": "moderate",
+  "lane_configuration": "partially constrained",
+  "traffic_control": [
+    "construction barrels",
+    "exit ramp"
+  ],
+  "lane_changes": "possible obstruction ahead",
+  "hazards": [
+    "vehicle behaving unpredictably",
+    "vehicle hit side rail",
+    "potential for collision"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "steady",
+    "lane_position": "right lane"
+  }
+}

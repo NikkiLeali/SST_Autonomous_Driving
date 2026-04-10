@@ -1,0 +1,51 @@
+[
+  {
+    "frame_id": "accident_frame_01",
+    "scene_type": "highway_driving",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "To minimize the potential for collisions caused by sudden changes in speed or lane position while still allowing for responsive driving in case of changing traffic conditions."
+  },
+  {
+    "frame_id": "accident_frame_02",
+    "scene_type": "emerging_hazard",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To maintain a safe distance from other vehicles and minimize risk of collision due to the accident and potential unpredictable behavior."
+  },
+  {
+    "frame_id": "accident_frame_03",
+    "scene_type": "collision_event",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "Maintaining a safe distance from the collision area and avoiding potential risks of changing lanes or coming to a complete stop."
+  },
+  {
+    "frame_id": "accident_frame_04",
+    "scene_type": "blocked_lane",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "Maintaining speed allows for better reaction to potential hazards and allows other vehicles more room to maneuver."
+  },
+  {
+    "frame_id": "accident_frame_05",
+    "scene_type": "post_collision",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "Minimizing the risk of additional accidents by reducing speed."
+  },
+  {
+    "frame_id": "accident_frame_06",
+    "scene_type": "secondary_collision_risk",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To minimize risks by reducing the speed and ensuring a safe distance from other vehicles due to the presence of debris, accident scene, and unstable traffic flow."
+  },
+  {
+    "frame_id": "accident_frame_07",
+    "scene_type": "post_incident_recovery",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "Minimize the risk of collisions with debris or damaged vehicles by maintaining a steady course."
+  }
+]

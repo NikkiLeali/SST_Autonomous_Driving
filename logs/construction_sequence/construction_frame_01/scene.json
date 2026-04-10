@@ -1,0 +1,23 @@
+{
+  "scene_type": "construction_zone",
+  "frame_id": "construction_frame_01",
+  "road_type": "two-lane road",
+  "objects": [
+    "cars",
+    "construction barrels"
+  ],
+  "traffic_density": "low",
+  "lane_configuration": "beginning of lane shift",
+  "traffic_control": [
+    "cones"
+  ],
+  "lane_changes": "possible upcoming merge",
+  "hazards": [
+    "road work zone ahead"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "moderate",
+    "lane_position": "center"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "high",
+  "intent": "Maintaining speed and lane position ensures safety while complying with traffic laws.",
+  "fallback": "If necessary, reduce speed or change lanes cautiously to ensure safety during critical situations."
+}

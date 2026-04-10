@@ -1,0 +1,26 @@
+{
+  "scene_type": "post_incident_recovery",
+  "frame_id": "accident_frame_07",
+  "road_type": "multi-lane highway",
+  "objects": [
+    "cars",
+    "damaged vehicle",
+    "debris"
+  ],
+  "traffic_density": "moderate",
+  "lane_configuration": "partially open",
+  "traffic_control": [
+    "barrels"
+  ],
+  "lane_changes": "possible with caution",
+  "hazards": [
+    "remaining debris",
+    "damaged vehicles",
+    "driver distraction risk"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "slow",
+    "lane_position": "center lane"
+  }
+}

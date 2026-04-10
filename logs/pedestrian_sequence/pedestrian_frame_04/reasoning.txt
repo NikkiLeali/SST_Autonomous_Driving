@@ -1,0 +1,7 @@
+ 1. The scene involves a city street with a pedestrian crossing (crosswalk) and multiple vehicles. The traffic signal for the ego vehicle (your autonomous vehicle) is green, but there's still a pedestrian in the roadway, creating a conflict between the traffic signal state and the pedestrian's right-of-way.
+
+2. Risks or hazards present include the potential collision with the pedestrian as they may not be aware of your presence or intending to cross, causing a conflict between vehicles as you proceed based on the green light, and legal liability due to the pedestrian being in the roadway when it is their responsibility to yield.
+
+3. Actions available include waiting for the pedestrian to clear the roadway before proceeding (even if the traffic signal changes), honking or flashing lights to alert the pedestrian of your presence, and potentially contacting local authorities to handle the situation.
+
+4. The safest and most reasonable action would be to wait for the pedestrian to fully clear the roadway before proceeding, even if the traffic signal changes. This ensures the safety of all parties involved and minimizes potential legal liability. Alerting the pedestrian with honking or flashing lights can also help make them aware of your presence while you wait.

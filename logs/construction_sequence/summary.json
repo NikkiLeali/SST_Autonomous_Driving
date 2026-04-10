@@ -1,0 +1,37 @@
+[
+  {
+    "frame_id": "construction_frame_01",
+    "scene_type": "construction_zone",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "To follow traffic rules and prepare for the upcoming construction zone and merge, ensuring safety by respecting other road users."
+  },
+  {
+    "frame_id": "construction_frame_02",
+    "scene_type": "construction_zone",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Proceeding cautiously by maintaining a moderate speed while monitoring the construction zone for potential hazards."
+  },
+  {
+    "frame_id": "construction_frame_03",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To prepare for the merge while minimizing risks associated with sudden lane changes or maneuvers."
+  },
+  {
+    "frame_id": "construction_frame_04",
+    "scene_type": "construction_zone",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "Maintaining speed and lane position ensures safety while complying with traffic laws."
+  },
+  {
+    "frame_id": "construction_frame_05",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To increase reaction time and respond to the unpredictable motion of the crossing vehicle"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To minimize risks by reducing the speed and ensuring a safe distance from other vehicles due to the presence of debris, accident scene, and unstable traffic flow.",
+  "fallback": "If slowing down is not effective in maintaining a safe distance or if other vehicles do not respond appropriately, consider changing lanes to a safer position while ensuring it's safe to do so."
+}

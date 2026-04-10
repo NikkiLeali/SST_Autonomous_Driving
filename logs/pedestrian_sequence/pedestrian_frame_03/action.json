@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "Ensuring safety for both the vehicle occupants and the pedestrian, while maintaining compliance with traffic regulations.",
+  "fallback": "If the pedestrian fails to complete crossing in a reasonable time or if an immediate threat arises, activate emergency braking or maneuver around the pedestrian if there is enough space, being mindful of other vehicles on the road."
+}

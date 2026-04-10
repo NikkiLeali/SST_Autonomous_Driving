@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To prepare for the merge while minimizing risks associated with sudden lane changes or maneuvers.",
+  "fallback": "If slowing down is not possible due to traffic conditions, then maintain_speed will be chosen until a safe opportunity for merging arises."
+}

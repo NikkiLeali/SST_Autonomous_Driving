@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To ensure safety for both the pedestrian and the autonomous vehicle by giving priority to the pedestrian's right-of-way.",
+  "fallback": "Contact local authorities if the pedestrian does not clear the roadway in a reasonable amount of time after being alerted."
+}

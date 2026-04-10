@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "To minimize the potential for collisions caused by sudden changes in speed or lane position while still allowing for responsive driving in case of changing traffic conditions.",
+  "fallback": "Adjust speed based on posted speed limits in work zones or if other vehicles are approaching at unsafe speeds"
+}
