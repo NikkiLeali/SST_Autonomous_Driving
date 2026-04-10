@@ -1,0 +1,13 @@
+{
+  "scene_type": "active_pedestrian_crossing",
+  "frame_id": "pedestrian_frame_03",
+  "road_type": "city street",
+  "objects": ["cars", "pedestrian"],
+  "traffic_signal": { "state": "red" },
+  "traffic_control": ["crosswalk"],
+  "hazards": ["pedestrian in roadway"],
+  "ego_vehicle_state": {
+    "speed": "stopped",
+    "lane_position": "approach lane"
+  }
+}

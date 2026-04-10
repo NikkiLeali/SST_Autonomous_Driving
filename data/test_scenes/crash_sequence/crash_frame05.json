@@ -1,0 +1,20 @@
+{
+  "scene_type": "post_collision",
+  "frame_id": "accident_frame_05",
+  "road_type": "multi-lane highway",
+  "objects": ["cars", "debris"],
+  "traffic_density": "moderate",
+  "lane_configuration": "partially obstructed",
+  "traffic_control": ["barrels"],
+  "lane_changes": "possible but risky",
+  "hazards": [
+    "road debris",
+    "unpredictable vehicle motion",
+    "reduced safe maneuvering space"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "very low",
+    "lane_position": "center lane"
+  }
+}

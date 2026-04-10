@@ -1,0 +1,20 @@
+{
+  "scene_type": "secondary_collision_risk",
+  "frame_id": "accident_frame_06",
+  "road_type": "multi-lane highway",
+  "objects": ["cars", "pickup truck", "debris"],
+  "traffic_density": "moderate",
+  "lane_configuration": "unstable flow",
+  "traffic_control": ["barrels"],
+  "lane_changes": "unsafe",
+  "hazards": [
+    "secondary vehicle interaction",
+    "loss of control",
+    "collision risk"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "very low",
+    "lane_position": "center lane"
+  }
+}

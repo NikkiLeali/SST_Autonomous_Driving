@@ -1,0 +1,16 @@
+{
+  "scene_type": "signal_conflict",
+  "frame_id": "pedestrian_frame_04",
+  "road_type": "city street",
+  "objects": ["cars", "pedestrian"],
+  "traffic_signal": { "state": "green" },
+  "traffic_control": ["crosswalk"],
+  "hazards": [
+    "pedestrian still in roadway",
+    "conflict between signal and right-of-way"
+  ],
+  "ego_vehicle_state": {
+    "speed": "stopped",
+    "lane_position": "approach lane"
+  }
+}

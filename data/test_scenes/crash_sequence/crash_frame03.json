@@ -1,0 +1,20 @@
+{
+  "scene_type": "collision_event",
+  "frame_id": "accident_frame_03",
+  "road_type": "multi-lane highway",
+  "objects": ["cars", "collision vehicle"],
+  "traffic_density": "moderate",
+  "lane_configuration": "blocked right side",
+  "traffic_control": ["construction barrels", "exit ramp"],
+  "lane_changes": "blocked / unsafe",
+  "hazards": [
+    "active collision",
+    "vehicle obstructing lane",
+    "vehicles slowing"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "decelerating",
+    "lane_position": "right lane"
+  }
+}

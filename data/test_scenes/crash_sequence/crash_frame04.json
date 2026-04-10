@@ -1,0 +1,20 @@
+{
+  "scene_type": "blocked_lane",
+  "frame_id": "accident_frame_04",
+  "road_type": "multi-lane highway",
+  "objects": ["cars", "disabled vehicle"],
+  "traffic_density": "moderate",
+  "lane_configuration": "lane obstructed",
+  "traffic_control": ["construction barrels"],
+  "lane_changes": "limited maneuvering space",
+  "hazards": [
+    "blocked lane",
+    "close proximity vehicle",
+    "risk of collision"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "low",
+    "lane_position": "right lane"
+  }
+}
