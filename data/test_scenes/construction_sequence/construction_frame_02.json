@@ -7,7 +7,12 @@
   "lane_configuration": "right lane narrowing",
   "traffic_control": ["cones", "barrels"],
   "lane_changes": "merge likely required",
-  "hazards": ["lane narrowing"],
+  "hazards": ["lane narrowing", "reduced lateral space"],
+  "hazard_severity": "medium",
+  "hazard_proximity": "near",
+  "path_status": "constrained",
+  "action_urgency": "medium",
+  "merge_necessity": "likely",
   "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "moderate",

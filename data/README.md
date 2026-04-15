@@ -33,3 +33,26 @@ All data sources should be documented with:
 
 ## Test Image URL:
 https://www.istockphoto.com/photo/daytime-interstate-traffic-perspective-gm1361912866-434114689
+
+Data Schema:
+{
+  "scene_type": "",
+  "frame_id": "",
+  "road_type": "",
+  "objects": [],
+  "traffic_density": "",
+  "lane_configuration": "",
+  "traffic_control": [],
+  "lane_changes": "",
+  "hazards": [],
+  "hazard_severity": "",
+  "hazard_proximity": "",
+  "path_status": "",
+  "action_urgency": "",
+  "merge_necessity": "",
+  "visibility": "",
+  "ego_vehicle_state": {
+    "speed": "",
+    "lane_position": ""
+  }
+}

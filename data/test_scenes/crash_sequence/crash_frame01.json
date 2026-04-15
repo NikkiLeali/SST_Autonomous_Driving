@@ -8,6 +8,11 @@
   "traffic_control": ["construction barrels", "exit ramp"],
   "lane_changes": "none",
   "hazards": [],
+  "hazard_severity": "low",
+  "hazard_proximity": "far",
+  "path_status": "clear",
+  "action_urgency": "low",
+  "merge_necessity": "none",
   "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "steady",

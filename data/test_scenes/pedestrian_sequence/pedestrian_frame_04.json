@@ -3,12 +3,21 @@
   "frame_id": "pedestrian_frame_04",
   "road_type": "city street",
   "objects": ["cars", "pedestrian"],
-  "traffic_signal": { "state": "green" },
+  "traffic_density": "low",
+  "lane_configuration": "intersection crossing",
   "traffic_control": ["crosswalk"],
+  "traffic_signal": { "state": "green" },
+  "lane_changes": "none",
   "hazards": [
     "pedestrian still in roadway",
     "conflict between signal and right-of-way"
   ],
+  "hazard_severity": "critical",
+  "hazard_proximity": "immediate",
+  "path_status": "blocked",
+  "action_urgency": "immediate",
+  "merge_necessity": "none",
+  "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "stopped",
     "lane_position": "approach lane"

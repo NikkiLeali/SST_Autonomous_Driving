@@ -7,7 +7,16 @@
   "lane_configuration": "single usable lane",
   "traffic_control": ["cones", "barrels"],
   "lane_changes": "shared lane with opposing traffic",
-  "hazards": ["oncoming vehicle in close proximity", "limited clearance"],
+  "hazards": [
+    "oncoming vehicle in close proximity",
+    "limited clearance",
+    "shared lane conflict"
+  ],
+  "hazard_severity": "high",
+  "hazard_proximity": "immediate",
+  "path_status": "partially_blocked",
+  "action_urgency": "high",
+  "merge_necessity": "immediate",
   "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "low",

@@ -7,7 +7,16 @@
   "lane_configuration": "partially constrained",
   "traffic_control": ["construction barrels", "exit ramp"],
   "lane_changes": "possible obstruction ahead",
-  "hazards": ["vehicle behaving unpredictably", "vehicle hit side rail", "potential for collision"],
+  "hazards": [
+    "vehicle behaving unpredictably",
+    "vehicle hit side rail",
+    "potential for collision"
+  ],
+  "hazard_severity": "medium",
+  "hazard_proximity": "near",
+  "path_status": "constrained",
+  "action_urgency": "medium",
+  "merge_necessity": "possible",
   "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "steady",

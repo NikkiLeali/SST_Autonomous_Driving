@@ -8,10 +8,15 @@
   "traffic_control": ["construction barrels"],
   "lane_changes": "limited maneuvering space",
   "hazards": [
-    "blocked lane",
+    "blocked lane directly ahead",
     "close proximity vehicle",
-    "risk of collision"
+    "no safe forward path"
   ],
+  "hazard_severity": "critical",
+  "hazard_proximity": "immediate",
+  "path_status": "blocked",
+  "action_urgency": "immediate",
+  "merge_necessity": "none",
   "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "low",

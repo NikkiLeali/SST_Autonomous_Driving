@@ -12,6 +12,11 @@
     "damaged vehicles",
     "driver distraction risk"
   ],
+  "hazard_severity": "medium",
+  "hazard_proximity": "near",
+  "path_status": "constrained",
+  "action_urgency": "medium",
+  "merge_necessity": "possible",
   "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "slow",

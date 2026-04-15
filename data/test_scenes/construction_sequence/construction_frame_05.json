@@ -10,8 +10,13 @@
   "hazards": [
     "vehicle crossing into path",
     "unpredictable motion",
-    "limited reaction time"
+    "no clear forward path"
   ],
+  "hazard_severity": "critical",
+  "hazard_proximity": "immediate",
+  "path_status": "blocked",
+  "action_urgency": "immediate",
+  "merge_necessity": "none",
   "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "low",

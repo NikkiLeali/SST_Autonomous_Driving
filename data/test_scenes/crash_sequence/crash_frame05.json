@@ -12,6 +12,11 @@
     "unpredictable vehicle motion",
     "reduced safe maneuvering space"
   ],
+  "hazard_severity": "high",
+  "hazard_proximity": "near",
+  "path_status": "partially_blocked",
+  "action_urgency": "high",
+  "merge_necessity": "possible",
   "visibility": "clear",
   "ego_vehicle_state": {
     "speed": "very low",
