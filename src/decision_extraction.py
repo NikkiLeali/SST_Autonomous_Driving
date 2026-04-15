@@ -23,11 +23,20 @@ def build_action_prompt(reasoning: str) -> str:
 You are an autonomous driving decision module.
 
 Based on the following reasoning:
-
 {reasoning}
 
 Choose exactly ONE action from the following list:
 {ACTIONS}
+
+IMPORTANT DECISION RULES:
+- If there is an immediate hazard (collision, pedestrian in path, blocked lane), you MUST choose "stop"
+- If the situation is evolving or uncertain, choose "slow_down"
+- Only choose "maintain_speed" when the scene is clearly safe and stable
+- Use "yield" when interacting with other vehicles or pedestrians in shared space based on right-of-way rules
+- Use "merge_left" or "merge_right" when lane changes are required due to road conditions
+- Ensure all decision actions prioritizes safety (both for the vehicle and surrounding entities) above all else.
+
+Your decision must reflect the severity of the situation.
 
 Then provide:
 - confidence (low, medium, or high)
