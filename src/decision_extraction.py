@@ -28,10 +28,11 @@ Based on the following reasoning:
 Choose exactly ONE action from the following list:
 {ACTIONS}
 
-IMPORTANT DECISION RULES:
+CRITICAL SAFETY RULES:
 - If there is an immediate hazard (collision, pedestrian in path, blocked lane), you MUST choose "stop"
 - If the situation is evolving or uncertain, choose "slow_down"
-- Only choose "maintain_speed" when the scene is clearly safe and stable
+- If visibility or control is compromised, prefer "stop" over "slow_down"
+- Only use "maintain_speed" if there are NO hazards and the scene is stable
 - Use "yield" when interacting with other vehicles or pedestrians in shared space based on right-of-way rules
 - Use "merge_left" or "merge_right" when lane changes are required due to road conditions
 - Ensure all decision actions prioritizes safety (both for the vehicle and surrounding entities) above all else.
