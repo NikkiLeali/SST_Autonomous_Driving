@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "The scene is somewhat safe and stable, but there are potential risks due to the accident residue and construction barrels. Maintaining speed allows for a level of responsiveness while minimizing disruption to traffic flow.",
+  "fallback": "If sudden changes in the road or traffic behavior are detected, slow_down will be implemented to ensure safety."
+}

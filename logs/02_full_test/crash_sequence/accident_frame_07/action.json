@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "To minimize the risk of additional incidents due to congestion and reduce driver distraction in a scene with debris, damaged vehicles, and increased traffic density.",
+  "fallback": "If slowing down does not prevent the autonomous vehicle from colliding with an immediate hazard or if the situation becomes too uncertain, the action would be to stop."
+}

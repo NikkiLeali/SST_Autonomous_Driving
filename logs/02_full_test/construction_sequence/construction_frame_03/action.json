@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "To ensure a safe and controlled maneuver due to construction zone, lane closure, and the requirement for merge.",
+  "fallback": "If slowing down does not prevent an immediate hazard or collision, then the action would be to stop."
+}

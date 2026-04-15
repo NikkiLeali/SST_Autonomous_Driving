@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "Minimizes the risk of collision and ensures compliance with traffic rules.",
+  "fallback": "Slow_down to allow more time for the pedestrian to clear the crosswalk, if the situation does not improve after stopping."
+}

@@ -1,0 +1,12 @@
+ 1. In this scene, an autonomous vehicle (ego-vehicle) is stopped at a city street with a green traffic signal. There's a pedestrian still in the roadway, and a crosswalk is present. This creates a conflict between the signal state and right-of-way.
+
+2. Risks or hazards include:
+   - Collision with the pedestrian since they are still in the roadway
+   - Violation of traffic rules due to the conflicting situation between the traffic signal state and right-of-way
+
+3. Available actions could be:
+   - Proceeding when safe (after ensuring the pedestrian has cleared the crosswalk)
+   - Remaining stopped and waiting for the pedestrian to clear the roadway
+   - Signaling or honking to alert the pedestrian of the vehicle's presence
+
+4. The safest and most reasonable action would be to wait for the pedestrian to clear the crosswalk before proceeding, as it minimizes the risk of collision and ensures compliance with traffic rules. This patient approach prioritizes safety over potential inconvenience in the context of autonomous driving.

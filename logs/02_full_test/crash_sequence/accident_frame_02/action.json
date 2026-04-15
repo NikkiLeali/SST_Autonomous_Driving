@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "Reducing speed provides more reaction time and reduces the impact of any collisions that may occur due to unpredictable behavior or secondary collisions.",
+  "fallback": "If slowing down is not possible, consider maintaining a safe distance from other vehicles and cautiously maintain the current lane position while keeping an eye on developing situations."
+}

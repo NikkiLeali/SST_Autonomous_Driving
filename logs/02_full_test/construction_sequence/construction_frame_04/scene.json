@@ -1,0 +1,26 @@
+{
+  "scene_type": "construction_zone",
+  "frame_id": "construction_frame_04",
+  "road_type": "two-lane road",
+  "objects": [
+    "cars",
+    "construction barrels",
+    "oncoming vehicle"
+  ],
+  "traffic_density": "moderate",
+  "lane_configuration": "single usable lane",
+  "traffic_control": [
+    "cones",
+    "barrels"
+  ],
+  "lane_changes": "shared lane with opposing traffic",
+  "hazards": [
+    "oncoming vehicle in close proximity",
+    "limited clearance"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "low",
+    "lane_position": "center"
+  }
+}

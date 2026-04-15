@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To ensure safety and compliance with traffic regulations, as the pedestrian is crossing the street at a marked crosswalk while traffic is stopped.",
+  "fallback": "Slow_down if there are no imminent hazards but the situation remains uncertain or evolving."
+}

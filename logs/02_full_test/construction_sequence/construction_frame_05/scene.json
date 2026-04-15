@@ -1,0 +1,27 @@
+{
+  "scene_type": "construction_zone",
+  "frame_id": "construction_frame_05",
+  "road_type": "two-lane road",
+  "objects": [
+    "cars",
+    "construction barrels",
+    "vehicle crossing path"
+  ],
+  "traffic_density": "moderate",
+  "lane_configuration": "conflicting vehicle movement",
+  "traffic_control": [
+    "cones",
+    "barrels"
+  ],
+  "lane_changes": "blocked or ambiguous",
+  "hazards": [
+    "vehicle crossing into path",
+    "unpredictable motion",
+    "limited reaction time"
+  ],
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "low",
+    "lane_position": "center"
+  }
+}

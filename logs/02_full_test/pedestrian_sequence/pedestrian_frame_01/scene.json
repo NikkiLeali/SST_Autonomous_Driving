@@ -1,0 +1,19 @@
+{
+  "scene_type": "signal_controlled_intersection",
+  "frame_id": "pedestrian_frame_01",
+  "road_type": "city street",
+  "objects": [
+    "cars"
+  ],
+  "traffic_signal": {
+    "state": "red"
+  },
+  "traffic_control": [
+    "crosswalk"
+  ],
+  "hazards": [],
+  "ego_vehicle_state": {
+    "speed": "slow",
+    "lane_position": "approach lane"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Maintaining speed allows the vehicle to adapt to changing conditions while minimizing disruption to traffic flow. However, we will remain vigilant for any changes in the construction zone.",
+  "fallback": "If the right lane narrows significantly and it is unsafe to merge into the left lane immediately, slow_down will be chosen to ensure safety."
+}

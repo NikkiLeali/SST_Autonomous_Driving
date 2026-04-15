@@ -1,0 +1,51 @@
+[
+  {
+    "frame_id": "accident_frame_01",
+    "scene_type": "highway_driving",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "The scene is somewhat safe and stable, but there are potential risks due to the accident residue and construction barrels. Maintaining speed allows for a level of responsiveness while minimizing disruption to traffic flow."
+  },
+  {
+    "frame_id": "accident_frame_02",
+    "scene_type": "emerging_hazard",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "Reducing speed provides more reaction time and reduces the impact of any collisions that may occur due to unpredictable behavior or secondary collisions."
+  },
+  {
+    "frame_id": "accident_frame_03",
+    "scene_type": "collision_event",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To match the pace of other vehicles, maintain a safe distance and avoid potential additional collisions due to the blocked lane configuration and limited visibility."
+  },
+  {
+    "frame_id": "accident_frame_04",
+    "scene_type": "blocked_lane",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "To reduce the chances of collision with other vehicles while they are adjusting to the blocked lane."
+  },
+  {
+    "frame_id": "accident_frame_05",
+    "scene_type": "post_collision",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "Reducing speed allows for better control and increased visibility of potential hazards in the post-collision situation."
+  },
+  {
+    "frame_id": "accident_frame_06",
+    "scene_type": "secondary_collision_risk",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Minimizing interaction with other vehicles and reducing the risk of losing control due to maneuvers while maximizing visibility."
+  },
+  {
+    "frame_id": "accident_frame_07",
+    "scene_type": "post_incident_recovery",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "To minimize the risk of additional incidents due to congestion and reduce driver distraction in a scene with debris, damaged vehicles, and increased traffic density."
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "Reducing speed allows for better control and increased visibility of potential hazards in the post-collision situation.",
+  "fallback": "If slowing down does not significantly improve safety, consider changing lanes to a clearer lane if safe to do so, or stop if an immediate hazard is detected."
+}

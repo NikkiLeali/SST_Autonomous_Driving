@@ -1,0 +1,37 @@
+[
+  {
+    "frame_id": "construction_frame_01",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "Reducing speed helps accommodate construction activities, prepare for potential merging vehicles and ensure a safe distance from other vehicles."
+  },
+  {
+    "frame_id": "construction_frame_02",
+    "scene_type": "construction_zone",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Maintaining speed allows the vehicle to adapt to changing conditions while minimizing disruption to traffic flow. However, we will remain vigilant for any changes in the construction zone."
+  },
+  {
+    "frame_id": "construction_frame_03",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "To ensure a safe and controlled maneuver due to construction zone, lane closure, and the requirement for merge."
+  },
+  {
+    "frame_id": "construction_frame_04",
+    "scene_type": "construction_zone",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Maintaining speed and position allows for cautious monitoring of the oncoming traffic while minimizing sudden maneuvers in a narrow lane with limited clearance."
+  },
+  {
+    "frame_id": "construction_frame_05",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "To ensure a sufficient reaction time and distance from other vehicles in the conflicting traffic pattern"
+  }
+]

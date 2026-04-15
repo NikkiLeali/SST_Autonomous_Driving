@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Maintaining speed and position allows for cautious monitoring of the oncoming traffic while minimizing sudden maneuvers in a narrow lane with limited clearance.",
+  "fallback": "If the oncoming vehicle does not adjust its course, then slowing down or changing lanes (if safe to do so) can be considered as secondary actions."
+}

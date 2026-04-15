@@ -1,0 +1,37 @@
+[
+  {
+    "frame_id": "pedestrian_frame_01",
+    "scene_type": "signal_controlled_intersection",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "The red traffic light instructs us to stop, ensuring safety by not colliding with other vehicles or pedestrians."
+  },
+  {
+    "frame_id": "pedestrian_frame_02",
+    "scene_type": "pedestrian_crossing",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To ensure safety and compliance with traffic regulations, as the pedestrian is crossing the street at a marked crosswalk while traffic is stopped."
+  },
+  {
+    "frame_id": "pedestrian_frame_03",
+    "scene_type": "active_pedestrian_crossing",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To prioritize safety by preventing a collision with the pedestrian who is crossing the road at a marked crosswalk during a red traffic signal."
+  },
+  {
+    "frame_id": "pedestrian_frame_04",
+    "scene_type": "signal_conflict",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "Minimizes the risk of collision and ensures compliance with traffic rules."
+  },
+  {
+    "frame_id": "pedestrian_frame_05",
+    "scene_type": "post_pedestrian_crossing",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Maintaining speed allows for a cautious approach, reacting quickly if necessary and minimizing the risk of an accident."
+  }
+]

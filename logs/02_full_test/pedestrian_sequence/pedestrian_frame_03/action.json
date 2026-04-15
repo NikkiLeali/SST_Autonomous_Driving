@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To prioritize safety by preventing a collision with the pedestrian who is crossing the road at a marked crosswalk during a red traffic signal.",
+  "fallback": "If the pedestrian does not clear the crosswalk in a timely manner or if an unexpected obstacle appears, slow down and prepare to stop further."
+}

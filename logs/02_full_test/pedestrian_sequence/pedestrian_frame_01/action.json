@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "The red traffic light instructs us to stop, ensuring safety by not colliding with other vehicles or pedestrians.",
+  "fallback": "In case the vehicle cannot safely stop, we will slow down as much as possible and prepare for an emergency stop."
+}

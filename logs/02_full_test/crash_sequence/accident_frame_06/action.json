@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Minimizing interaction with other vehicles and reducing the risk of losing control due to maneuvers while maximizing visibility.",
+  "fallback": "Slow_down if the scene becomes more uncertain or if traffic conditions worsen"
+}

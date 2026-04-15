@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "Reducing speed helps accommodate construction activities, prepare for potential merging vehicles and ensure a safe distance from other vehicles.",
+  "fallback": "If slowing down does not seem to be effective in reducing the risk of collision, consider temporarily stopping or altering the lane position if necessary."
+}
