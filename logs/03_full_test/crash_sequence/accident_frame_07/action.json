@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "To minimize the risk of collision with potential debris or other vehicles while maintaining a safe distance.",
+  "fallback": "If slowing down does not ensure sufficient safety, a temporary stop may be considered."
+}

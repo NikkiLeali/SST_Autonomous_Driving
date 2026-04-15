@@ -1,0 +1,19 @@
+ 1. The scene is a construction zone on a two-lane road, with moderate traffic density. There's a single usable lane due to traffic cones and barrels. An ego vehicle (you) is moving at low speed in the center of this lane. There are also other cars, construction barrels, and an oncoming vehicle in close proximity.
+
+2. The risks or hazards present include:
+   - Hazard 1: Oncoming vehicle in close proximity, which might lead to a head-on collision if not handled correctly.
+   - Hazard 2: Limited clearance due to the construction zone and traffic control obstacles like cones and barrels.
+   - Hazard 3: Shared lane conflict as you have to share the lane with opposing traffic since it's partially blocked.
+   - Hazard 4: Potential shared lane conflicts with other vehicles trying to merge or overtake due to the immediate merge necessity.
+
+3. Available actions include:
+   - Slowing down further to reduce speed and give more reaction time.
+   - Moving closer to the shoulder of the road (if safe and legal) to create more space for the oncoming vehicle.
+   - Anticipating and allowing for a lane change or merge if possible, ensuring it's safe to do so.
+   - Using the horn or hazard lights to signal presence and intentions.
+
+4. The safest and most reasonable action would be:
+   - To slow down even more to ensure enough reaction time if the oncoming vehicle does not adjust its path. This gives you more room to maneuver if necessary.
+   - Signal your intentions clearly using the horn or hazard lights, especially before attempting any lane changes or merges.
+   - If a safe opportunity arises, consider moving closer to the shoulder of the road (if safe and legal) to create more space for the oncoming vehicle.
+   - Always prioritize safety above all else and remember that being predictable and communicative can help reduce potential conflicts in such situations.

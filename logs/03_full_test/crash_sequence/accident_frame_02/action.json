@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Maintaining speed allows for better observation of the evolving situation, while keeping a safe distance from other vehicles and being prepared for potential sudden maneuvers.",
+  "fallback": "If conditions worsen or become uncertain, I will slow down to prioritize safety."
+}

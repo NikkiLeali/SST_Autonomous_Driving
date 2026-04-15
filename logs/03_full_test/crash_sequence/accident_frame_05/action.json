@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "high",
+  "intent": "Maintaining speed allows for better reaction time to any unexpected situations and minimizes the risk of further collisions.",
+  "fallback": "If maintaining speed becomes impossible due to reduced traction or obstacles, slow down to a crawl and proceed cautiously."
+}

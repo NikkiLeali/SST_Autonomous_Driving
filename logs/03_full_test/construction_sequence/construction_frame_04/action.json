@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "Slowing down increases reaction time and provides more opportunities to avoid potential collisions.",
+  "fallback": "If slowing down is not sufficient to ensure safety, the vehicle should stop."
+}

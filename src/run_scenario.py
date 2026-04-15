@@ -6,7 +6,7 @@ from sst_reasoning import sst_reason
 from decision_extraction import extract_action
 
 BASE_SCENE_DIR = Path("data/test_scenes")
-BASE_LOG_DIR = Path("logs/02_full_test")
+BASE_LOG_DIR = Path("logs/03_full_test")
 
 def run_all_scenarios():
     scenario_dirs = [d for d in BASE_SCENE_DIR.iterdir() if d.is_dir()]

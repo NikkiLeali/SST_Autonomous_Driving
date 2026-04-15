@@ -1,0 +1,51 @@
+[
+  {
+    "frame_id": "accident_frame_01",
+    "scene_type": "highway_driving",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "Maintaining the current speed and lane position while being alert to potential hazards from traffic density and construction work."
+  },
+  {
+    "frame_id": "accident_frame_02",
+    "scene_type": "emerging_hazard",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Maintaining speed allows for better observation of the evolving situation, while keeping a safe distance from other vehicles and being prepared for potential sudden maneuvers."
+  },
+  {
+    "frame_id": "accident_frame_03",
+    "scene_type": "collision_event",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To maintain safety by reducing speed and creating a safer distance from other vehicles while navigating cautiously around the collision scene."
+  },
+  {
+    "frame_id": "accident_frame_04",
+    "scene_type": "blocked_lane",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To ensure safety and avoid potential collisions due to the critical hazard of a blocked lane and immediate proximity of other vehicles."
+  },
+  {
+    "frame_id": "accident_frame_05",
+    "scene_type": "post_collision",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "Maintaining speed allows for better reaction time to any unexpected situations and minimizes the risk of further collisions."
+  },
+  {
+    "frame_id": "accident_frame_06",
+    "scene_type": "secondary_collision_risk",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To minimize the risk of collision with other vehicles or debris, given the high severity of the situation and unsafe lane changes."
+  },
+  {
+    "frame_id": "accident_frame_07",
+    "scene_type": "post_incident_recovery",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "To minimize the risk of collision with potential debris or other vehicles while maintaining a safe distance."
+  }
+]

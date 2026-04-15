@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To prepare for a safe merge and minimize risks associated with reduced maneuvering space, traffic density, and potential collisions.",
+  "fallback": "If the AV encounters an immediate hazard or if the situation becomes uncertain, it will choose to stop. If slowing down is insufficient to navigate the construction zone safely, it may consider changing lanes."
+}

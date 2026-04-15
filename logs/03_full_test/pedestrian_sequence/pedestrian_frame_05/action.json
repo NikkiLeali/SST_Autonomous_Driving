@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "Reducing speed ensures a safe distance from the crossing pedestrian and allows for continued motion once it is confirmed that the pedestrian has finished crossing safely.",
+  "fallback": "If slowing down further does not result in an adequate safety margin, the vehicle would stop to yield right-of-way to the pedestrian."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "To maintain a safe distance and speed when approaching the construction zone and upcoming merge point to minimize risks of collisions.",
+  "fallback": "If visibility deteriorates or traffic conditions become uncertain, consider stopping until the situation is clear."
+}

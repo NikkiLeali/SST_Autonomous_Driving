@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To ensure immediate safety and prevent potential collision with the pedestrian who is directly in the roadway.",
+  "fallback": "If the vehicle fails to stop due to mechanical issues, the system will activate emergency brakes as a last resort."
+}

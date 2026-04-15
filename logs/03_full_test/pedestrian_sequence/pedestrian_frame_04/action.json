@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To prioritize safety by ensuring the immediate hazard (pedestrian in path) is resolved before proceeding.",
+  "fallback": "If the pedestrian does not move, consider using emergency braking or maneuver to avoid a collision."
+}

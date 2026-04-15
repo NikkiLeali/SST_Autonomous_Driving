@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "Ensure the vehicle has right-of-way and reduces the risk of colliding with other vehicles or pedestrians.",
+  "fallback": "In case the traffic signal does not turn green after a reasonable amount of time, proceed to 'slow_down' and carefully observe the scene for changes."
+}

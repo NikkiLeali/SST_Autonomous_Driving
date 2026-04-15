@@ -1,0 +1,6 @@
+{
+  "action": "merge_left",
+  "confidence": "medium",
+  "intent": "To create more lateral space and prepare for a safe merge due to the low traffic density, lane narrowing, and construction zone.",
+  "fallback": "Slow_down if merging is not possible at this moment."
+}

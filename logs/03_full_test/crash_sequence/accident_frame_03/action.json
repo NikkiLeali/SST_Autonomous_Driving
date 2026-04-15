@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To maintain safety by reducing speed and creating a safer distance from other vehicles while navigating cautiously around the collision scene.",
+  "fallback": "If slowing down is not possible or safe (e.g., due to traffic congestion), consider finding an alternate path within the traffic rules, provided that it does not lead to further risk."
+}

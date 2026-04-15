@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "Prioritizing safety due to the immediate hazard posed by a pedestrian entering the crosswalk.",
+  "fallback": "If the pedestrian fails to complete crossing within a reasonable time, the AV may proceed with caution after sounding warning horn or hazard lights."
+}

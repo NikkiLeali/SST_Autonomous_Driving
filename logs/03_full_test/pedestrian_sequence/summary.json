@@ -1,0 +1,37 @@
+[
+  {
+    "frame_id": "pedestrian_frame_01",
+    "scene_type": "signal_controlled_intersection",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "Ensure the vehicle has right-of-way and reduces the risk of colliding with other vehicles or pedestrians."
+  },
+  {
+    "frame_id": "pedestrian_frame_02",
+    "scene_type": "pedestrian_crossing",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "Prioritizing safety due to the immediate hazard posed by a pedestrian entering the crosswalk."
+  },
+  {
+    "frame_id": "pedestrian_frame_03",
+    "scene_type": "active_pedestrian_crossing",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To ensure immediate safety and prevent potential collision with the pedestrian who is directly in the roadway."
+  },
+  {
+    "frame_id": "pedestrian_frame_04",
+    "scene_type": "signal_conflict",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To prioritize safety by ensuring the immediate hazard (pedestrian in path) is resolved before proceeding."
+  },
+  {
+    "frame_id": "pedestrian_frame_05",
+    "scene_type": "post_pedestrian_crossing",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "Reducing speed ensures a safe distance from the crossing pedestrian and allows for continued motion once it is confirmed that the pedestrian has finished crossing safely."
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "high",
+  "intent": "Maintaining speed helps to keep a safe distance from other vehicles and avoid obstructing traffic flow further, reducing the likelihood of accidents.",
+  "fallback": "Slow down if the vehicle ahead moves unexpectedly or if there's a sudden change in the traffic situation."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To minimize the risk of collision with other vehicles or debris, given the high severity of the situation and unsafe lane changes.",
+  "fallback": "Stop if safe to do so, as a last resort before potentially colliding with other vehicles or debris."
+}

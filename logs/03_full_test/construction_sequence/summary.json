@@ -1,0 +1,37 @@
+[
+  {
+    "frame_id": "construction_frame_01",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "To maintain a safe distance and speed when approaching the construction zone and upcoming merge point to minimize risks of collisions."
+  },
+  {
+    "frame_id": "construction_frame_02",
+    "scene_type": "construction_zone",
+    "action": "merge_left",
+    "confidence": "medium",
+    "intent": "To create more lateral space and prepare for a safe merge due to the low traffic density, lane narrowing, and construction zone."
+  },
+  {
+    "frame_id": "construction_frame_03",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To prepare for a safe merge and minimize risks associated with reduced maneuvering space, traffic density, and potential collisions."
+  },
+  {
+    "frame_id": "construction_frame_04",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "Slowing down increases reaction time and provides more opportunities to avoid potential collisions."
+  },
+  {
+    "frame_id": "construction_frame_05",
+    "scene_type": "construction_zone",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "Maintaining speed helps to keep a safe distance from other vehicles and avoid obstructing traffic flow further, reducing the likelihood of accidents."
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "high",
+  "intent": "Maintaining the current speed and lane position while being alert to potential hazards from traffic density and construction work.",
+  "fallback": "Slow_down if the hazards become more immediate or severe."
+}
