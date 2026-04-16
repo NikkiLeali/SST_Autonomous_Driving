@@ -52,6 +52,7 @@ This results in:
 | V1 | Basic SST reasoning | Good reasoning, weak decisions |
 | V2 | Decision constraints | More conservative behavior |
 | V3 | Structured scene inputs | Emergence of STOP + MERGE |
+| V4 | Structured reasoning + scene-aware decision | Consistent STOP in high-risk scenarios + improved action alignment |
 
 ### Observed Behavior
 
@@ -60,17 +61,35 @@ Strengths:
 - Context-aware decisions
 - Improved action diversity (merge, stop)
 - Reasoning aligns with scene inputs
+- Reliable STOP behavior in collision and blocked-lane scenarios (V4)
+- Strong alignment between structured scene inputs and final decisions
 
 Weaknesses:
-- STOP still inconsistent in crash scenarios
+- Early-stage underreaction (e.g., maintain_speed in emerging hazards)
 - Occasional unsafe maintain_speed
 - Weak risk → action escalation
 - Confidence overestimated
+- Maintain_speed still appears in some non-clear scenarios
 
 ### Key Insight
 
-Structured scene representations significantly improve decision quality, but:
-LLMs require explicit constraints to reliably escalate actions in high-risk scenarios.
+Structured scene representations and explicit decision constraints significantly improve decision quality.
+
+Reliable safety behavior emerges when:
+- scene semantics encode urgency (severity, proximity, path status)
+- decision rules enforce action escalation
+
+Reasoning alone is insufficient without structured grounding.
+
+---
+
+## Decision Behavior Progression
+
+| Scenario | V1 | V3 | V4 |
+|--------|----|----|----|
+| Construction | maintain | merge appears | merge + stop correct |
+| Crash | slow only | partial STOP | consistent STOP |
+| Pedestrian | correct | correct | correct |
 
 ---
 
@@ -80,6 +99,8 @@ LLMs require explicit constraints to reliably escalate actions in high-risk scen
 - Strengthen STOP enforcement rules
 - Improve mapping:
   hazard_severity → action
+- Reduce maintain_speed usage when hazards are present
+- Improve early-stage hazard response (pre-escalation behavior)
 
 ### 2. Vision → Scene Pipeline
 Replace manual JSON with:
@@ -107,8 +128,8 @@ Extend from single frame → multi-frame reasoning
   - decision constraints
 - System now shows:
   - strong reasoning
-  - good pedestrian safety
-  - emerging correct actions (STOP, MERGE)
+  - reliable STOP behavior in high-risk scenarios
+  - consistent emergence of structured actions (STOP, MERGE)
 - Still needs:
   - consistent STOP in high-risk cases
   - vision-based perception
