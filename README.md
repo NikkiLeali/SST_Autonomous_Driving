@@ -1,52 +1,115 @@
-# SST_Autonomous_Driving: Self-Talk Reasoning for Explainable Autonomous Driving Decisions
-This repo explores the use of **Safety Self-Talk (SST) based reasoning** to support explainable decision-making in autonomous driving scenarios. The project implements a modular Python pipeline that converts driving video frames into structured scene descriptions, applies an LLM-based self-talk reasoning process to interpret risk and intent, and outputs explicit driving decisions along with audience-specific explanations (car-to-self, car-to-passenger, car-to-car).
+# SST Autonomous Driving — Project Summary
+
+## Connection to SST Patent
+
+This project directly implements the core idea of the SST (Safety Self-Talk) patent:
+- Drivers perform internal “self-talk” before acting
+- This reasoning influences safe driving decisions
+- LLMs are used to simulate this reasoning process
+
+Patent principle:
+“Safety self-talk is the main initiative of subsequent safety actions.”
+
+## System Interpretation of SST
+
+The system operationalizes SST as:
+`Scene (structured state) → Self-Talk Reasoning (LLM) → Decision (LLM with constraints)`
+
+Key extension:
+- Reasoning is separated from decision
+- Structured scene data is preserved for safety enforcement
+
+This results in:
+- explainable decisions
+- interpretable reasoning
+- safety-aware action selection
 
 ---
 
-## High-Level Pipeline
+## Methods
 
-1. Driving video input (rush hour, construction, accidents)
-2. Frame extraction from video
-3. Visual perception (image -> structured text)
-4. SST reasoning (what is happening, risks, actions)
-5. Decision extraction (explicit action output)
-6. Communication generation (self / passenger / other vehicles)
+### Current Pipeline
 
----
+`Scene JSON (manual perception) → SST Reasoning (LLM) → Decision Extraction (LLM + rules) → Structured Output`
 
-## Project Plan
+### Key Design Choices
 
-**Phase 1: Prototype**
-- Curate a small set of driving videos
-- Extract representative frames
-- Generate scene descriptions using a vision-language model
-- Apply SST prompts to reason about each scene
-- Output structured decisions and explanations
-
-**Phase 2: Refinement**
-- Improve prompt consistency and determinism
-- Add light human-expected action annotations
-- Compare LLM decisions to human expectations
-
-**Phase 3: Research Expansion**
-- Replace videos with public driving datasets
-- Expand communication modes
-- Formalize evaluation metrics
+- Structured scene representation (hazard severity, proximity, path status)
+- Two-stage LLM pipeline:
+  - reasoning (interpretation)
+  - decision (enforced action selection)
+- Constrained action space:
+  maintain_speed, slow_down, stop, merge, yield
 
 ---
 
-## Repository Structure
-SST_Autonomous_Driving/
-├── data/ # videos, frames, annotations
-├── src/ # core pipeline scripts
-├── prompts/ # SST prompt templates
-├── notebooks/ # exploratory analysis only
-├── logs/ # outputs and experiment logs
-├── docs/ # research notes and drafts
+## Results / Iteration Summary
 
-## Getting Started
-1. Create a Python virtual environment
-2. Install dependencies from `requirements.txt`
-3. Place videos in `data/raw/videos`
-4. Ensure Ollama is running on a seperate terminal via `ollama serve`
-4. Run scripts in `src/` in pipeline order
+### Versions
+
+| Version | Change | Outcome |
+|--------|------|--------|
+| V1 | Basic SST reasoning | Good reasoning, weak decisions |
+| V2 | Decision constraints | More conservative behavior |
+| V3 | Structured scene inputs | Emergence of STOP + MERGE |
+
+### Observed Behavior
+
+Strengths:
+- Strong pedestrian safety (consistent STOP)
+- Context-aware decisions
+- Improved action diversity (merge, stop)
+- Reasoning aligns with scene inputs
+
+Weaknesses:
+- STOP still inconsistent in crash scenarios
+- Occasional unsafe maintain_speed
+- Weak risk → action escalation
+- Confidence overestimated
+
+### Key Insight
+
+Structured scene representations significantly improve decision quality, but:
+LLMs require explicit constraints to reliably escalate actions in high-risk scenarios.
+
+---
+
+## What Still Needs To Be Done
+
+### 1. Decision Layer (Final Tuning)
+- Strengthen STOP enforcement rules
+- Improve mapping:
+  hazard_severity → action
+
+### 2. Vision → Scene Pipeline
+Replace manual JSON with:
+`image → detection/caption → structured JSON`
+
+### 3. Temporal Reasoning
+Extend from single frame → multi-frame reasoning
+
+### 4. Evaluation Framework
+- Compare against human actions
+- Measure correctness and safety
+
+### 5. Confidence Calibration
+- Multi-run agreement
+- uncertainty estimation
+
+---
+
+## TL;DR
+
+- Implemented SST (self-talk) using LLMs for driving decisions
+- Built pipeline: scene → reasoning → decision
+- Major improvements came from:
+  - structured scene inputs
+  - decision constraints
+- System now shows:
+  - strong reasoning
+  - good pedestrian safety
+  - emerging correct actions (STOP, MERGE)
+- Still needs:
+  - consistent STOP in high-risk cases
+  - vision-based perception
+
