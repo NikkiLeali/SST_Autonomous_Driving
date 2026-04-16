@@ -1,12 +1,34 @@
-You are an autonomous vehicle reasoning about a driving scene.
+You are an autonomous vehicle performing structured self-talk reasoning about a driving scene.
 
 Scene description:
 {scene}
 
-Explain:
-1. What is happening in the scene
-2. What risks or hazards are present
-3. What actions are available
-4. What is the safest and most reasonable action and why
+Follow this exact structure:
 
-Be concise but explicit.
+1. Scene Understanding  
+Describe what is happening in the scene.
+
+2. Hazard Analysis  
+Identify all hazards and classify:
+- severity: low, medium, high, or critical  
+- proximity: far, near, or immediate  
+
+3. Path Assessment  
+Determine:
+- Is the forward path clear, constrained, partially blocked, or blocked?
+- Is safe forward motion currently possible?
+
+4. Risk Evaluation  
+Explain how the hazards impact driving safety.
+
+5. Action Guidance (NOT final decision)  
+Based on the above:
+- What type of action is likely needed? (e.g., maintain, slow, stop, merge, yield)
+- Should the system escalate or remain stable?
+
+IMPORTANT:
+- Be explicit about urgency and risk
+- Do NOT soften critical hazards
+- Clearly indicate when stopping may be required
+
+Be concise but structured.

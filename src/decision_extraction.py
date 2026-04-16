@@ -15,29 +15,30 @@ ACTIONS = [
     "yield"
 ]
 
-# future: confidence can be numeric 0-1 with multiple adversarial LLM runs, aggregating the result
 
-
-def build_action_prompt(reasoning: str) -> str:
+def build_action_prompt(scene: dict, reasoning: str) -> str:
     return f"""
 You are an autonomous driving decision module.
 
-Based on the following reasoning:
+Scene description:
+{json.dumps(scene, indent=2)}
+
+Reasoning about the scene:
 {reasoning}
 
 Choose exactly ONE action from the following list:
 {ACTIONS}
 
 CRITICAL SAFETY RULES:
-- If there is an immediate hazard (collision, pedestrian in path, blocked lane), you MUST choose "stop"
-- If the situation is evolving or uncertain, choose "slow_down"
-- If visibility or control is compromised, prefer "stop" over "slow_down"
-- Only use "maintain_speed" if there are NO hazards and the scene is stable
-- Use "yield" when interacting with other vehicles or pedestrians in shared space based on right-of-way rules
+- If hazard_severity is "critical" AND hazard_proximity is "immediate", you MUST choose "stop"
+- If path_status is "blocked", you MUST choose "stop"
+- If hazard_severity is "high" and hazard_proximity is "near", prefer "stop" or "slow_down"
+- If action_urgency is "immediate", prefer "stop"
+- Only use "maintain_speed" if path_status is "clear" AND hazard_severity is "low"
+- Use "yield" when interacting with other vehicles or pedestrians in shared space
 - Use "merge_left" or "merge_right" when lane changes are required due to road conditions
-- Ensure all decision actions prioritizes safety (both for the vehicle and surrounding entities) above all else.
 
-Your decision must reflect the severity of the situation.
+You MUST follow these rules strictly.
 
 Then provide:
 - confidence (low, medium, or high)
@@ -53,6 +54,7 @@ Respond ONLY in valid JSON with this structure:
   "fallback": "<backup action>"
 }}
 """
+
 
 def call_ollama(prompt: str) -> dict:
     payload = {
@@ -71,19 +73,29 @@ def call_ollama(prompt: str) -> dict:
     except json.JSONDecodeError:
         raise ValueError("LLM did not return valid JSON:\n" + raw)
 
-def extract_action(reasoning: str) -> dict:
-    prompt = build_action_prompt(reasoning)
+
+def extract_action(scene: dict, reasoning: str) -> dict:
+    prompt = build_action_prompt(scene, reasoning)
     return call_ollama(prompt)
 
+
 if __name__ == "__main__":
+    # Load scene
+    scene_path = Path(f"logs/{test_name}_scene.json")
     reasoning_path = Path(f"logs/{test_name}_reasoning.txt")
     output_path = Path(f"logs/{test_name}_action.json")
 
+    assert scene_path.exists(), f"Missing scene file: {scene_path}"
     assert reasoning_path.exists(), f"Missing reasoning file: {reasoning_path}"
 
+    with open(scene_path) as f:
+        scene = json.load(f)
+
     reasoning = reasoning_path.read_text()
-    action = extract_action(reasoning)
+
+    action = extract_action(scene, reasoning)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w") as f:
         json.dump(action, f, indent=2)
+    
