@@ -1,0 +1,20 @@
+{
+  "scene_type": "highway",
+  "frame_id": "1234567890",
+  "road_type": "highway",
+  "hazard_severity": "medium",
+  "hazard_proximity": "medium",
+  "path_status": "clear",
+  "traffic_density": "medium",
+  "visibility": "good",
+  "key_objects": [
+    "Jeep",
+    "black_sedan",
+    "pickup_truck"
+  ],
+  "ego_vehicle_state": {
+    "speed": "medium",
+    "lane_position": "center"
+  },
+  "brief_reasoning": "The scene is on a highway with moderate traffic density and visibility. The hazard severity is medium due to the presence of multiple vehicles and the need for cautious driving. The ego vehicle should maintain a safe distance and be prepared to react to any sudden changes in traffic flow."
+}

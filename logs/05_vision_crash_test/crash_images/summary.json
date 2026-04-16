@@ -1,0 +1,72 @@
+[
+  {
+    "frame_id": "crash_frame_01",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "The construction zone necessitates a cautious approach, so the system should slow down to maintain safety."
+  },
+  {
+    "frame_id": "crash_frame_02",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "Navigating through the partially blocked construction zone safely requires reduced speed."
+  },
+  {
+    "frame_id": "crash_frame_03",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "Reducing speed increases reaction time and improves maneuverability in case of sudden changes or obstacles due to the construction zone and the presence of a stopped vehicle."
+  },
+  {
+    "frame_id": "crash_frame_04",
+    "scene_type": "construction_zone",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To avoid potential collision with the construction barriers or stopped vehicle, it is necessary to stop in this high-risk situation."
+  },
+  {
+    "frame_id": "crash_frame_05",
+    "scene_type": "highway",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "The forward path is clear, and the current speed is appropriate given the moderate traffic density. However, caution should be exercised due to the identified hazards."
+  },
+  {
+    "frame_id": "crash_frame_06",
+    "scene_type": "highway",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "The ego vehicle should maintain its current speed and position but with increased vigilance due to the identified hazards."
+  },
+  {
+    "frame_id": "crash_frame_07",
+    "scene_type": "highway",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "To ensure a safe distance from the debris, maintaining a reduced speed allows for more reaction time and minimizes potential damage."
+  },
+  {
+    "frame_id": "crash_frame_08",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "To ensure a safe following distance due to the construction zone and hazard proximity."
+  },
+  {
+    "frame_id": "crash_frame_09",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To ensure a safe distance from potential hazards, maintaining control over the vehicle in case of sudden movements or obstacles."
+  },
+  {
+    "frame_id": "crash_frame_10",
+    "scene_type": "construction_zone",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "Reducing speed provides a safer response to the partially blocked construction zone and the presence of close hazards."
+  }
+]

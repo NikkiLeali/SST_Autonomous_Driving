@@ -1,2 +1,2 @@
 # test name definition file
-test_name = "decision_test_case_01"
+test_name = "vision_test_case_01"

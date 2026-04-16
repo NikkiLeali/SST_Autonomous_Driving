@@ -1,0 +1,20 @@
+{
+  "scene_type": "construction_zone",
+  "frame_id": "",
+  "road_type": "highway",
+  "hazard_severity": "medium",
+  "hazard_proximity": "close",
+  "path_status": "partially_blocked",
+  "traffic_density": "medium",
+  "visibility": "good",
+  "key_objects": [
+    "orange_cones",
+    "construction_fencing",
+    "stopped_vehicle"
+  ],
+  "ego_vehicle_state": {
+    "speed": "low",
+    "lane_position": "center"
+  },
+  "brief_reasoning": "The construction zone is close and partially blocking the lane, requiring caution and reduced speed to avoid any potential hazards."
+}

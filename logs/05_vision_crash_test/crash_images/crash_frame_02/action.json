@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "Navigating through the partially blocked construction zone safely requires reduced speed.",
+  "fallback": "Prepare to stop or change lanes if necessary for safe passage."
+}

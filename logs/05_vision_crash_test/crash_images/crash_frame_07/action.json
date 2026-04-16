@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "To ensure a safe distance from the debris, maintaining a reduced speed allows for more reaction time and minimizes potential damage.",
+  "fallback": "Prepare to stop if necessary, should the vehicle approach the debris too closely."
+}
