@@ -1,0 +1,26 @@
+{
+  "scene_type": "highway_driving",
+  "frame_id": "accident_frame_01",
+  "road_type": "multi-lane highway",
+  "objects": [
+    "cars"
+  ],
+  "traffic_density": "moderate",
+  "lane_configuration": "open lanes",
+  "traffic_control": [
+    "construction barrels",
+    "exit ramp"
+  ],
+  "lane_changes": "none",
+  "hazards": [],
+  "hazard_severity": "low",
+  "hazard_proximity": "far",
+  "path_status": "clear",
+  "action_urgency": "low",
+  "merge_necessity": "none",
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "steady",
+    "lane_position": "right lane"
+  }
+}

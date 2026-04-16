@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Maintaining speed allows the ego vehicle to adjust its position for potential future lane changes while minimizing disruption to other vehicles.",
+  "fallback": "If a safe merge opportunity does not present itself, the system should prepare to slow down and yield to oncoming traffic before attempting a merge."
+}

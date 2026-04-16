@@ -1,0 +1,6 @@
+{
+  "action": "merge_left",
+  "confidence": "high",
+  "intent": "Merging left to avoid collision risk with the oncoming vehicle and shared lane conflict.",
+  "fallback": "If merging left is not possible, consider slowing down or stopping momentarily to ensure safety."
+}

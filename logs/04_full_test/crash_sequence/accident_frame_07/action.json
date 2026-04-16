@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "Reducing speed to navigate through the debris and damaged vehicles, thus ensuring a safer distance between the ego vehicle and other objects.",
+  "fallback": "In case slowing down does not provide adequate safety, consider merging into another lane if possible with caution."
+}

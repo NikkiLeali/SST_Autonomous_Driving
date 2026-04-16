@@ -1,0 +1,31 @@
+{
+  "scene_type": "pedestrian_crossing",
+  "frame_id": "pedestrian_frame_02",
+  "road_type": "city street",
+  "objects": [
+    "cars",
+    "pedestrian"
+  ],
+  "traffic_density": "low",
+  "lane_configuration": "intersection crossing",
+  "traffic_control": [
+    "crosswalk"
+  ],
+  "traffic_signal": {
+    "state": "red"
+  },
+  "lane_changes": "none",
+  "hazards": [
+    "pedestrian entering crosswalk"
+  ],
+  "hazard_severity": "high",
+  "hazard_proximity": "near",
+  "path_status": "constrained",
+  "action_urgency": "high",
+  "merge_necessity": "none",
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "stopped",
+    "lane_position": "approach lane"
+  }
+}

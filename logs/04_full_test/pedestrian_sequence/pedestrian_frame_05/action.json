@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Maintaining speed allows the vehicle to adapt to changes in the pedestrian's movement while being prepared to stop if necessary.",
+  "fallback": "If the pedestrian does not clear the crosswalk within a reasonable time, slow_down will be executed."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Keeping a steady speed allows for better reaction to sudden changes in the unpredictable vehicle's behavior and ensures maneuverability if necessary.",
+  "fallback": "If the hazardous situation worsens, prepare to slow down or stop."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "high",
+  "intent": "The forward path is clear, and there are no immediate hazards or urgency. Therefore, the autonomous vehicle can maintain its current speed.",
+  "fallback": "If traffic signal changes to green or if any hazards appear closer or with higher severity, slow down or stop accordingly."
+}

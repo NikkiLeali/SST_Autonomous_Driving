@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To avoid a collision with the pedestrian, the ego-vehicle must come to a complete halt.",
+  "fallback": "If stopping is not possible due to sudden unexpected obstacles or mechanical failure, the vehicle should safely pull over and stop as soon as it's safe to do so."
+}

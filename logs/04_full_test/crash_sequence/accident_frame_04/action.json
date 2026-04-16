@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To prevent a collision due to the critical hazard severity and immediate proximity of the obstacles in the blocked lane.",
+  "fallback": "If an emergency stop is not possible, attempt to slow down as much as safely allowed before the obstacle to minimize damage."
+}

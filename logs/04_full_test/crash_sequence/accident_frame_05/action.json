@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To prioritize safety due to the high hazard severity, reduced safe maneuvering space and critical urgency of the situation.",
+  "fallback": "In case it is not possible or safe to stop, attempt a controlled slow-down while signaling intent to other vehicles and preparing for potential evasive action."
+}

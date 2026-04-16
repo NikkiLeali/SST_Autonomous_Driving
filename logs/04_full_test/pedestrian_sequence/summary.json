@@ -1,0 +1,37 @@
+[
+  {
+    "frame_id": "pedestrian_frame_01",
+    "scene_type": "signal_controlled_intersection",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "The forward path is clear, and there are no immediate hazards or urgency. Therefore, the autonomous vehicle can maintain its current speed."
+  },
+  {
+    "frame_id": "pedestrian_frame_02",
+    "scene_type": "pedestrian_crossing",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To avoid a collision with the pedestrian, the ego-vehicle must come to a complete halt."
+  },
+  {
+    "frame_id": "pedestrian_frame_03",
+    "scene_type": "active_pedestrian_crossing",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To ensure safety as the pedestrian is in immediate proximity and the forward path is blocked."
+  },
+  {
+    "frame_id": "pedestrian_frame_04",
+    "scene_type": "signal_conflict",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "The ego vehicle should come to a complete stop until the pedestrian has safely cleared the intersection due to critical hazard severity and immediate proximity."
+  },
+  {
+    "frame_id": "pedestrian_frame_05",
+    "scene_type": "post_pedestrian_crossing",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Maintaining speed allows the vehicle to adapt to changes in the pedestrian's movement while being prepared to stop if necessary."
+  }
+]

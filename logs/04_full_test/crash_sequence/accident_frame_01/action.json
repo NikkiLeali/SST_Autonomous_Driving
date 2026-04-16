@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Given the current scene, maintaining speed allows the vehicle to adapt to changing traffic conditions and construction activities while remaining vigilant.",
+  "fallback": "If hazard severity increases or there is a sudden change in traffic patterns, the system will slow down or yield as appropriate."
+}

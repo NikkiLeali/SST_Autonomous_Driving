@@ -1,0 +1,37 @@
+[
+  {
+    "frame_id": "construction_frame_01",
+    "scene_type": "construction_zone",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "The current speed is moderate, and the construction zone is not immediately ahead. Maintaining this speed allows us to adapt quickly if necessary while being cautious."
+  },
+  {
+    "frame_id": "construction_frame_02",
+    "scene_type": "construction_zone",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Maintaining speed allows the ego vehicle to adjust its position for potential future lane changes while minimizing disruption to other vehicles."
+  },
+  {
+    "frame_id": "construction_frame_03",
+    "scene_type": "construction_zone",
+    "action": "merge_left",
+    "confidence": "high",
+    "intent": "To navigate safely through the construction zone by merging into the open lane and avoiding potential collisions caused by traffic merging and reduced maneuvering space."
+  },
+  {
+    "frame_id": "construction_frame_04",
+    "scene_type": "construction_zone",
+    "action": "merge_left",
+    "confidence": "high",
+    "intent": "Merging left to avoid collision risk with the oncoming vehicle and shared lane conflict."
+  },
+  {
+    "frame_id": "construction_frame_05",
+    "scene_type": "construction_zone",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To avoid a collision with the crossing vehicle and ensure driving safety."
+  }
+]

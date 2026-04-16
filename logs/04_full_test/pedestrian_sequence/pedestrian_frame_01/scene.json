@@ -1,0 +1,28 @@
+{
+  "scene_type": "signal_controlled_intersection",
+  "frame_id": "pedestrian_frame_01",
+  "road_type": "city street",
+  "objects": [
+    "cars"
+  ],
+  "traffic_density": "low",
+  "lane_configuration": "approach to intersection",
+  "traffic_control": [
+    "crosswalk"
+  ],
+  "traffic_signal": {
+    "state": "red"
+  },
+  "lane_changes": "none",
+  "hazards": [],
+  "hazard_severity": "low",
+  "hazard_proximity": "far",
+  "path_status": "clear",
+  "action_urgency": "low",
+  "merge_necessity": "none",
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "slow",
+    "lane_position": "approach lane"
+  }
+}

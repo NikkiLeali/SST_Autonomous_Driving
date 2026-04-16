@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "The current speed is moderate, and the construction zone is not immediately ahead. Maintaining this speed allows us to adapt quickly if necessary while being cautious.",
+  "fallback": "If conditions worsen or traffic becomes more congested, consider slowing down to provide additional time for reacting to potential hazards."
+}

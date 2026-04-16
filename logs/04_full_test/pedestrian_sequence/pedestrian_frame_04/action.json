@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "The ego vehicle should come to a complete stop until the pedestrian has safely cleared the intersection due to critical hazard severity and immediate proximity.",
+  "fallback": "If the pedestrian does not clear the intersection within a reasonable time, consider alerting other vehicles or contacting emergency services."
+}

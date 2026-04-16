@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To avoid a potential collision due to high hazard severity and proximity, immediate action urgency, and the partially blocked path.",
+  "fallback": "If the ego vehicle cannot safely stop, it will attempt an emergency maneuver to minimize risk and damage."
+}

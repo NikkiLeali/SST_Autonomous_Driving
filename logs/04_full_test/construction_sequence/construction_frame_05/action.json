@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To avoid a collision with the crossing vehicle and ensure driving safety.",
+  "fallback": "If unable to stop, attempt to maneuver towards the right shoulder of the road while maintaining as much distance from other vehicles as possible."
+}

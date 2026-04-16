@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To ensure safety as the hazard severity is critical and the proximity is immediate, blocking the forward path.",
+  "fallback": "If stopping safely becomes impossible, attempt to slow down to a minimum speed while keeping a safe distance from other vehicles."
+}

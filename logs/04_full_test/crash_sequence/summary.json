@@ -1,0 +1,51 @@
+[
+  {
+    "frame_id": "accident_frame_01",
+    "scene_type": "highway_driving",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Given the current scene, maintaining speed allows the vehicle to adapt to changing traffic conditions and construction activities while remaining vigilant."
+  },
+  {
+    "frame_id": "accident_frame_02",
+    "scene_type": "emerging_hazard",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Keeping a steady speed allows for better reaction to sudden changes in the unpredictable vehicle's behavior and ensures maneuverability if necessary."
+  },
+  {
+    "frame_id": "accident_frame_03",
+    "scene_type": "collision_event",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To ensure safety as the hazard severity is critical and the proximity is immediate, blocking the forward path."
+  },
+  {
+    "frame_id": "accident_frame_04",
+    "scene_type": "blocked_lane",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To prevent a collision due to the critical hazard severity and immediate proximity of the obstacles in the blocked lane."
+  },
+  {
+    "frame_id": "accident_frame_05",
+    "scene_type": "post_collision",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To prioritize safety due to the high hazard severity, reduced safe maneuvering space and critical urgency of the situation."
+  },
+  {
+    "frame_id": "accident_frame_06",
+    "scene_type": "secondary_collision_risk",
+    "action": "stop",
+    "confidence": "high",
+    "intent": "To avoid a potential collision due to high hazard severity and proximity, immediate action urgency, and the partially blocked path."
+  },
+  {
+    "frame_id": "accident_frame_07",
+    "scene_type": "post_incident_recovery",
+    "action": "slow_down",
+    "confidence": "medium",
+    "intent": "Reducing speed to navigate through the debris and damaged vehicles, thus ensuring a safer distance between the ego vehicle and other objects."
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "action": "merge_left",
+  "confidence": "high",
+  "intent": "To navigate safely through the construction zone by merging into the open lane and avoiding potential collisions caused by traffic merging and reduced maneuvering space.",
+  "fallback": "If merge_left action cannot be safely executed, consider slowing down and yielding to oncoming traffic while looking for a suitable gap to change lanes."
+}
