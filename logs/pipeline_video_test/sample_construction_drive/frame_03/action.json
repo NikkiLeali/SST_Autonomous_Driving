@@ -1,6 +1,6 @@
 {
-  "action": "maintain_speed",
-  "confidence": "high",
-  "intent": "Given the current low traffic density, clear visibility, and low hazard severity, maintaining the speed is the best choice to keep up with the flow of traffic.",
-  "fallback": "If any sudden changes in construction activities or approaching vehicles occur, it may become necessary to slow down, adjust the lane position, or yield."
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "To accommodate the constrained path and ensure safe clearance of construction cones and barriers.",
+  "fallback": "Maintain speed while monitoring hazard conditions and adjusting position, with an increased urgency if necessary."
 }

@@ -1,6 +1,6 @@
 {
-  "action": "maintain_speed",
+  "action": "slow_down",
   "confidence": "high",
-  "intent": "The current speed and lane position are suitable for the scene, with low traffic density and minimal hazards. The ego vehicle should continue moving forward while remaining vigilant.",
-  "fallback": "If there is a sudden change in traffic or construction activities that could potentially obstruct the path or increase risk, slow down or adjust lane position as necessary."
+  "intent": "To adjust speed to accommodate the constrained path and ensure safe clearance of construction cones and barriers.",
+  "fallback": "If slowing down is not possible due to other vehicles, the system will attempt to find a safe position within the lane."
 }

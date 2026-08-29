@@ -1,6 +1,6 @@
 {
-  "action": "slow_down",
+  "action": "stop",
   "confidence": "high",
-  "intent": "To maintain a safe distance from the stopped vehicle and prepare for possible emergency maneuvers.",
-  "fallback": "If slowing down is not sufficient to avoid collision, stop will be executed."
+  "intent": "To avoid collision with the stationary vehicle in the construction zone and ensure safe navigation through the constrained path.",
+  "fallback": "If the ego vehicle cannot safely stop, maintain the current speed and position while preparing to navigate around the hazards cautiously if possible."
 }

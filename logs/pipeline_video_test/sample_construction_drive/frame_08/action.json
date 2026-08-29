@@ -1,6 +1,6 @@
 {
-  "action": "maintain_speed",
+  "action": "slow_down",
   "confidence": "medium",
-  "intent": "Maintaining speed allows for a more controlled movement through the construction zone while keeping an eye on potential hazards and adjusting the driving strategy if needed.",
-  "fallback": "Slow down if any new hazards or unforeseen events in the construction zone require it."
+  "intent": "Reducing speed will accommodate the constrained path and ensure safe clearance of construction cones, barriers, and other vehicles while approaching the construction zone.",
+  "fallback": "If slowing down does not allow for safe navigation or if the vehicle encounters an immediate hazard, prepare to stop."
 }

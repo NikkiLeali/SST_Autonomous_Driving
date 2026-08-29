@@ -1,6 +1,6 @@
 {
-  "action": "maintain_speed",
+  "action": "slow_down",
   "confidence": "medium",
-  "intent": "Continuing at the current speed helps navigate the construction zone cautiously while keeping a safe distance from potential obstacles and maintaining visibility.",
-  "fallback": "Slow_down"
+  "intent": "To accommodate the constrained path and ensure safe clearance of construction cones, barriers, and the construction zone.",
+  "fallback": "Prepare for potential stopping if required."
 }
