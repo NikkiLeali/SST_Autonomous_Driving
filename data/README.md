@@ -5,10 +5,13 @@ This directory contains all data used in the project, organized to support repro
 ---
 
 ## Folder Structure
-- `exanple_scenes/`
+- `example_scenes/`
   - Vision-To-Text JSON examples for testing reasoning/action LLMs
 - `raw/`
-  - Original driving videos (unmodified)
+  - Original driving videos (unmodified). Currently has one synthetic test
+    clip (`sample_construction_drive.mp4`, stitched from `frames/construction_test/`)
+    for exercising `run_pipeline.py` end to end - swap in a real dashcam clip
+    when available
 - `frames/`
   - Extracted image frames from videos
 - `annotations/`
@@ -34,8 +37,9 @@ All data sources should be documented with:
 ## Test Image URL:
 https://www.istockphoto.com/photo/daytime-interstate-traffic-perspective-gm1361912866-434114689
 
-Data Schema:
+Data Schema (produced by `vision_to_text.py`, also used for hand-authored test scenes):
 {
+  "observation": "",
   "scene_type": "",
   "frame_id": "",
   "road_type": "",

@@ -1,0 +1,62 @@
+[
+  {
+    "frame_id": "frame_01",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "The current speed and lane position are suitable for navigating through the construction zone with low traffic density. Maintaining speed allows for smooth movement while remaining vigilant."
+  },
+  {
+    "frame_id": "frame_02",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "The current speed and lane position are suitable for the scene, with low traffic density and minimal hazards. The ego vehicle should continue moving forward while remaining vigilant."
+  },
+  {
+    "frame_id": "frame_03",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "Given the current low traffic density, clear visibility, and low hazard severity, maintaining the speed is the best choice to keep up with the flow of traffic."
+  },
+  {
+    "frame_id": "frame_04",
+    "action": "maintain_speed",
+    "confidence": "high",
+    "intent": "The construction zone and barriers are currently causing a constraint, but the traffic density is low, visibility is clear, and the speed of the ego vehicle is moderate. Given these conditions, maintaining the current speed appears safe."
+  },
+  {
+    "frame_id": "frame_05",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "The current speed and lane position are suitable for navigating through the construction zone due to its low traffic density. However, the system should remain vigilant for any changes in traffic or construction activities."
+  },
+  {
+    "frame_id": "frame_06",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Continuing at the current speed helps navigate the construction zone cautiously while keeping a safe distance from potential obstacles and maintaining visibility."
+  },
+  {
+    "frame_id": "frame_07",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "The construction zone and low traffic density allow for maintaining the current speed, but caution must be exercised as there is still a moderate level of risk associated with the construction zone."
+  },
+  {
+    "frame_id": "frame_08",
+    "action": "maintain_speed",
+    "confidence": "medium",
+    "intent": "Maintaining speed allows for a more controlled movement through the construction zone while keeping an eye on potential hazards and adjusting the driving strategy if needed."
+  },
+  {
+    "frame_id": "frame_09",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To maintain a safe distance from the stopped vehicle and prepare for possible emergency maneuvers."
+  },
+  {
+    "frame_id": "frame_10",
+    "action": "slow_down",
+    "confidence": "high",
+    "intent": "To create enough distance between the ego vehicle and the stopped vehicle, reducing the risk of collision if the stopped vehicle suddenly moves."
+  }
+]
