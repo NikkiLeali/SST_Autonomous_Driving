@@ -23,9 +23,22 @@ def call_ollama(prompt: str) -> str:
 
     return response.json()["response"]
 
-def sst_reason(scene: dict) -> str:
+def sst_reason(scene: dict, history: list[str] | None = None) -> str:
     template = load_prompt_template()
-    prompt = template.format(scene=json.dumps(scene, indent=2))
+    scene_text = json.dumps(scene, indent=2)
+
+    # history = prior frames' reasoning, oldest to most recent, so SST can build
+    # on earlier uncertainty instead of re-reasoning each frame from scratch
+    if history:
+        history_text = "\n\n".join(
+            f"Frame {i + 1} reasoning:\n{h}" for i, h in enumerate(history)
+        )
+        scene_text = (
+            f"Prior frame observations (oldest to most recent):\n{history_text}\n\n"
+            f"Current frame scene description:\n{scene_text}"
+        )
+
+    prompt = template.format(scene=scene_text)
     return call_ollama(prompt)
 
 if __name__ == "__main__":

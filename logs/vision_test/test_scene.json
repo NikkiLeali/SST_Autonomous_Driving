@@ -1,0 +1,26 @@
+{
+  "observation": "A highway scene with multiple lanes of traffic under a clear sky, featuring mountains in the background.",
+  "scene_type": "highway",
+  "road_type": "highway",
+  "objects": [
+    "cars"
+  ],
+  "traffic_density": "medium",
+  "lane_configuration": "multiple lanes with a concrete barrier separating opposing traffic",
+  "traffic_control": [
+    "signs"
+  ],
+  "lane_changes": "possible upcoming merge",
+  "hazards": [],
+  "hazard_severity": "none",
+  "hazard_proximity": "far",
+  "path_status": "clear",
+  "action_urgency": "low",
+  "merge_necessity": "possible",
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "moderate",
+    "lane_position": "left"
+  },
+  "frame_id": "istockphoto-1361912866-612x612"
+}

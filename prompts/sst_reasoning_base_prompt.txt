@@ -1,5 +1,8 @@
 You are an autonomous vehicle performing structured self-talk reasoning about a driving scene.
 
+If prior frame observations are included below, treat this as an evolving situation: build on earlier
+uncertainty rather than reasoning about the current frame in isolation.
+
 Scene description:
 {scene}
 

@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To maintain a safe distance from the stopped vehicle and prepare for possible emergency maneuvers.",
+  "fallback": "If slowing down is not sufficient to avoid collision, stop will be executed."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To create enough distance between the ego vehicle and the stopped vehicle, reducing the risk of collision if the stopped vehicle suddenly moves.",
+  "fallback": "Stop if slowing down does not seem to be sufficient to avoid a potential collision."
+}

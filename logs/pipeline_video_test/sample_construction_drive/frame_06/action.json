@@ -1,0 +1,6 @@
+{
+  "action": "maintain_speed",
+  "confidence": "medium",
+  "intent": "Continuing at the current speed helps navigate the construction zone cautiously while keeping a safe distance from potential obstacles and maintaining visibility.",
+  "fallback": "Slow_down"
+}

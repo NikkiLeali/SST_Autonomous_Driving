@@ -1,0 +1,32 @@
+{
+  "observation": "A white van is stopped at a construction zone with traffic cones and road signs visible.",
+  "scene_type": "construction_zone",
+  "road_type": "two-lane road",
+  "objects": [
+    "white van",
+    "traffic cones",
+    "road signs",
+    "flags"
+  ],
+  "traffic_density": "low",
+  "lane_configuration": "two-lane road with construction zone",
+  "traffic_control": [
+    "cones",
+    "road signs"
+  ],
+  "lane_changes": "none",
+  "hazards": [
+    "construction zone"
+  ],
+  "hazard_severity": "low",
+  "hazard_proximity": "near",
+  "path_status": "constrained",
+  "action_urgency": "low",
+  "merge_necessity": "none",
+  "visibility": "clear",
+  "ego_vehicle_state": {
+    "speed": "slow",
+    "lane_position": "center"
+  },
+  "frame_id": "frame_09"
+}
