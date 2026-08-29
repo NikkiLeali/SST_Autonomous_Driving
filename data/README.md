@@ -7,15 +7,20 @@ This directory contains all data used in the project, organized to support repro
 ## Folder Structure
 - `example_scenes/`
   - Vision-To-Text JSON examples for testing reasoning/action LLMs
+- `test_scenes/`
+  - Hand-authored scene JSON, organized by scenario (`construction_sequence/`,
+    `crash_sequence/`, `pedestrian_sequence/`) - what `run_scenario.py` runs
+    against for the versioned `logs/0N_full_test` results
 - `raw/`
-  - Original driving videos (unmodified). Currently has one synthetic test
-    clip (`sample_construction_drive.mp4`, stitched from `frames/construction_test/`)
-    for exercising `run_pipeline.py` end to end - swap in a real dashcam clip
-    when available
+  - Original driving videos/images (unmodified). Currently has one synthetic
+    test clip (`sample_construction_drive.mp4`, stitched from
+    `frames/construction_test/`) and a folder of crash stills
+    (`crash_images/`) for exercising the vision pipeline - swap in real
+    dashcam footage when available (see root `HANDOFF.md`)
 - `frames/`
   - Extracted image frames from videos
 - `annotations/`
-  - Human-provided labels or expected actions (optional)
+  - Human-provided labels or expected actions (optional, not yet used)
 
 ---
 

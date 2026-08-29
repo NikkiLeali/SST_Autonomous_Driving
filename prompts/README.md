@@ -13,16 +13,20 @@ This directory contains prompt templates used for SST-based reasoning and commun
 
 ---
 
-## Prompt Types (exploratory)
+## Prompt Types
 
-- `sst_base_prompt.txt`
-  - Core self-talk reasoning prompt
+- `sst_reasoning_base_prompt.txt`
+  - Core self-talk reasoning prompt. Takes the current scene, and optionally
+    prior frames' reasoning, so it can reason about an evolving situation
+    instead of one frame at a time
 
-- `passenger_prompt.txt`
-  - Human-friendly explanation of decisions
+- `vision_scene_prompt.txt`
+  - Instructs the vision model to turn an image into the structured scene
+    JSON schema in `data/README.md`
 
-- `vehicle_prompt.txt`
-  - Machine-oriented intent or signaling output
+Audience-specific prompts (a human-friendly explanation, a machine-facing
+intent message) were planned but aren't built - see `communication_modes.py`
+in root `HANDOFF.md`.
 
 ---
 
