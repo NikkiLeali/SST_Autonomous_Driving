@@ -26,11 +26,41 @@ This results in:
 
 ---
 
+## Setup & Running
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Requires [Ollama](https://ollama.com) running locally with `mistral:instruct`
+(reasoning/decision) and `qwen2.5vl:7b` (vision) pulled.
+
+```bash
+# full video -> frames -> vision -> reasoning -> decision pipeline
+PYTHONPATH=src python3 src/run_pipeline.py data/raw/sample_construction_drive.mp4
+
+# reasoning/decision only, against hand-authored scene JSON (no vision call)
+PYTHONPATH=src python3 src/run_scenario.py
+```
+
+See **`HANDOFF.md`** for full setup detail, current project status, known
+gaps, and next steps.
+
+---
+
 ## Methods
 
 ### Current Pipeline
 
-`Scene JSON (manual perception) → SST Reasoning (LLM) → Decision Extraction (LLM + rules) → Structured Output`
+`Driving video → Frame extraction → Vision model (scene JSON) → SST Reasoning (LLM, evolving over frames) → Decision Extraction (LLM + rules) → Structured Output`
+
+`run_scenario.py` still exists as a lighter-weight harness that skips
+video/vision and runs reasoning + decision directly against hand-authored
+scene JSON in `data/test_scenes/` - that's what produced the V1-V4 results
+below, and it's still the fastest way to iterate on reasoning/decision
+prompts.
 
 ### Key Design Choices
 
@@ -93,36 +123,10 @@ Reasoning alone is insufficient without structured grounding.
 
 ---
 
-## What Still Needs To Be Done
-
-### 1. Decision Layer (Final Tuning)
-- Strengthen STOP enforcement rules
-- Improve mapping:
-  hazard_severity → action
-- Reduce maintain_speed usage when hazards are present
-- Improve early-stage hazard response (pre-escalation behavior)
-
-### 2. Vision → Scene Pipeline
-Replace manual JSON with:
-`image → detection/caption → structured JSON`
-
-### 3. Temporal Reasoning
-Extend from single frame → multi-frame reasoning
-
-### 4. Evaluation Framework
-- Compare against human actions
-- Measure correctness and safety
-
-### 5. Confidence Calibration
-- Multi-run agreement
-- uncertainty estimation
-
----
-
 ## TL;DR
 
 - Implemented SST (self-talk) using LLMs for driving decisions
-- Built pipeline: scene → reasoning → decision
+- Built pipeline: video → frames → vision → reasoning → decision
 - Major improvements came from:
   - structured scene inputs
   - decision constraints
@@ -130,7 +134,6 @@ Extend from single frame → multi-frame reasoning
   - strong reasoning
   - reliable STOP behavior in high-risk scenarios
   - consistent emergence of structured actions (STOP, MERGE)
-- Still needs:
-  - consistent STOP in high-risk cases
-  - vision-based perception
+
+Current status, known gaps, and next steps: see **`HANDOFF.md`**.
 
