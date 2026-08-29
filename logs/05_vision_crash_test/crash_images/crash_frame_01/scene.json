@@ -1,0 +1,18 @@
+{
+  "scene_type": "construction_zone",
+  "frame_id": "",
+  "road_type": "highway",
+  "hazard_severity": "medium",
+  "hazard_proximity": "medium",
+  "path_status": "partially_blocked",
+  "traffic_density": "low",
+  "visibility": "good",
+  "key_objects": [
+    "orange_barrels"
+  ],
+  "ego_vehicle_state": {
+    "speed": "medium",
+    "lane_position": "center"
+  },
+  "brief_reasoning": "The scene shows a highway with construction barriers and orange barrels, indicating a medium hazard. The path is partially blocked, requiring caution. The traffic density is low, and visibility is good, but the presence of construction materials necessitates a cautious approach."
+}

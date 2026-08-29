@@ -1,0 +1,18 @@
+{
+  "scene_type": "highway",
+  "frame_id": "1234567890",
+  "road_type": "highway",
+  "hazard_severity": "medium",
+  "hazard_proximity": "close",
+  "path_status": "partially_blocked",
+  "traffic_density": "medium",
+  "visibility": "good",
+  "key_objects": [
+    "debris"
+  ],
+  "ego_vehicle_state": {
+    "speed": "medium",
+    "lane_position": "right"
+  },
+  "brief_reasoning": "The presence of debris on the highway requires caution. Maintain a safe distance and be prepared to stop if necessary."
+}

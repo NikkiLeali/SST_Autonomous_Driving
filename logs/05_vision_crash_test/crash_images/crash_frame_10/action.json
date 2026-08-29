@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "Reducing speed provides a safer response to the partially blocked construction zone and the presence of close hazards.",
+  "fallback": "If slowing down does not prevent an immediate collision or critical situation, the system will escalate by requesting human intervention."
+}

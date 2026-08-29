@@ -12,10 +12,10 @@ This directory contains the core Python scripts for the project pipeline. Each s
 4. `decision_extraction.py`
 
 `run_pipeline.py` wires steps 1-4 together for a real video. `run_scenario.py` is
-a separate harness that skips 1-2 and runs 3-4 directly against hand-authored
-scene JSON in `data/test_scenes/` - that's what the versioned `logs/0N_full_test`
-runs came from, and it's still the fastest way to iterate on reasoning/decision
-prompts without needing a vision model call per test.
+a separate, lighter-weight harness - originally 3-4 only, against hand-authored
+scene JSON in `data/test_scenes/` (that's what the versioned `logs/0N_full_test`
+runs came from), since extended to also run 2-4 directly against a folder of
+images. See root `HANDOFF.md` for current status.
 
 `communication_modes.py` (audience-specific explanations) was in the original
 plan but isn't built - out of scope for the handoff, see root `HANDOFF.md`.
@@ -46,8 +46,9 @@ plan but isn't built - out of scope for the handoff, see root `HANDOFF.md`.
     Self-Talk / Action / Explanation per frame
 
 - `run_scenario.py`
-  - Batch-runs hand-authored scene JSON through reasoning + decision only
-    (no vision step) - used for the versioned experiments in `logs/`
+  - Batch-runs hand-authored scene JSON through reasoning + decision (used
+    for the versioned experiments in `logs/`), or a folder of images through
+    vision + reasoning + decision
 
 ---
 

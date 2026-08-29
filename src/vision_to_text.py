@@ -1,5 +1,6 @@
 import base64
 import json
+import ollama
 from pathlib import Path
 
 import requests
@@ -58,3 +59,6 @@ if __name__ == "__main__":
         json.dump(scene, f, indent=2)
 
     print(json.dumps(scene, indent=2))
+
+    print(f"Saved scene description to: {output_path}")
+    print(json.dumps(description, indent=2))

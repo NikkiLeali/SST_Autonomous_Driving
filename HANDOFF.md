@@ -2,8 +2,8 @@
 
 Read `README.md` first for the research framing (SST patent connection, why
 the pipeline is shaped the way it is, and the V1-V4 iteration history). This
-doc is the practical "how do I run this, what's actually done, and what's
-next" companion - it's the one to keep updated as the project moves forward.
+doc covers how to run things, what's actually done, and what's next - keep
+it updated as the project moves forward.
 
 ---
 
@@ -22,10 +22,9 @@ ollama pull mistral:instruct
 ollama pull qwen2.5vl:7b
 ```
 
-(`mistral:instruct` does the text reasoning/decision steps, `qwen2.5vl:7b` does
-scene description from images. Both are configured in `src/config.py` - swap
-either for a different local model name, or a different provider entirely,
-see "Next Steps" below.)
+(`mistral:instruct` does reasoning/decision, `qwen2.5vl:7b` does scene
+description from images. Both are configured in `src/config.py` - swap either
+for a different model or provider, see Next Steps below.)
 
 Run everything from the repo root (scripts use relative paths like
 `data/...`, `prompts/...`):
@@ -34,7 +33,7 @@ Run everything from the repo root (scripts use relative paths like
 # full video -> frames -> vision -> reasoning -> decision pipeline
 PYTHONPATH=src python3 src/run_pipeline.py data/raw/sample_construction_drive.mp4
 
-# reasoning/decision only, against hand-authored scene JSON (no vision model needed)
+# reasoning/decision against hand-authored scene JSON, or a folder of images
 PYTHONPATH=src python3 src/run_scenario.py
 ```
 
@@ -44,136 +43,109 @@ summary.json) under `logs/pipeline_video_test/<video_name>/`.
 
 ---
 
-## What's actually implemented
+## What's already implemented
 
-- **`extract_frames.py`** - samples ~10 evenly-spaced frames from a video with
-  opencv.
-- **`vision_to_text.py`** - real vision-model call (was a hardcoded stub
-  before this pass). Sends the frame to `qwen2.5vl:7b` via Ollama with
-  `prompts/vision_scene_prompt.txt`, gets back the same structured scene JSON
-  schema documented in `data/README.md` (plus a new `observation` field for a
-  plain-language summary).
-- **`sst_reasoning.py`** - takes an optional `history` list (prior frames'
-  reasoning text). `run_pipeline.py` passes a rolling window
-  (`HISTORY_WINDOW` in `config.py`, default 3) so reasoning can build evidence
-  across frames instead of re-deriving it each time - this is the "brake
-  lights -> cones -> blocked lane" behavior described for the project.
-  `run_scenario.py` doesn't pass history (single-frame scenes), so it's
-  unaffected.
-- **`run_pipeline.py`** - orchestrator tying the above together. Doesn't
-  replace `run_scenario.py`, which is still the right tool for iterating on
-  reasoning/decision prompts without a vision call in the loop.
+- **`extract_frames.py`** - samples ~10 evenly-spaced frames from a video
+  with opencv.
+- **`vision_to_text.py`** - calls `qwen2.5vl:7b` via Ollama with
+  `prompts/vision_scene_prompt.txt`, returns the structured scene JSON schema
+  from `data/README.md` plus an `observation` field for a plain-language
+  summary.
+- **`sst_reasoning.py`** - takes an optional `history` list of prior frames'
+  reasoning, so it can build evidence across frames instead of re-deriving it
+  each time (the "brake lights -> cones -> blocked lane" behavior). Passing
+  no history keeps single-frame behavior unchanged.
+- **`run_pipeline.py`** - orchestrates video -> frames -> vision -> reasoning
+  (with rolling history) -> decision, one frame at a time.
+- **`run_scenario.py`** - the lighter-weight test harness: runs
+  reasoning + decision against hand-authored scene JSON in
+  `data/test_scenes/` (no vision call - what produced the V1-V4 results), and
+  has also been extended to run vision + reasoning + decision directly
+  against a folder of images (see `logs/05_vision_crash_test/`).
 - **`data/raw/sample_construction_drive.mp4`** - a synthetic test clip
-  stitched from `data/frames/construction_test/` (there was no raw video in
-  the repo) so `run_pipeline.py` has something to run against. It's 5 source
-  images held for a few frames each, not an actual dashcam clip - see "Test
-  video sourcing" below for a real replacement. A run against it is logged at
-  `logs/pipeline_video_test/sample_construction_drive/` and shows the
-  escalation pattern working: `maintain_speed` through the early
-  low-severity construction frames, then `slow_down` once a stopped vehicle
-  blocks the lane.
+  stitched from 5 stock images in `data/frames/construction_test/`, not a
+  real dashcam clip. Used to confirm `run_pipeline.py` works end to end - see
+  "Test video sourcing" for a real replacement. The logged run
+  (`logs/pipeline_video_test/sample_construction_drive/`) shows the intended
+  escalation pattern: `maintain_speed` through low-severity construction
+  frames, `slow_down` once a stopped vehicle blocks the lane.
+
+---
+
+## Known issue: vision model doesn't infer risk
+
+The v5 crash test (`logs/05_vision_crash_test/analysis.md`) found that
+`qwen2.5vl:7b` correctly identifies objects (vehicles, debris, stopped cars)
+but does **not** reliably infer hazard severity or path blockage - a clear
+collision scene came back as `hazard_severity: medium` /
+`path_status: clear or partially_blocked` when it should have been
+`critical` / `blocked`. That under-reporting is what causes STOP to be
+delayed or skipped downstream. This is the single most important known gap
+right now - see Next Steps #1.
 
 ---
 
 ## Test video sourcing
 
-No real driving footage is in the repo yet - only the synthetic clip above
-and the still images under `data/frames/`. Good places to get a real short
-clip to test with, roughly in order of how usable the footage is for this
-prototype:
+Only the synthetic clip above and still images under `data/frames/` exist
+right now. Places to get a real short clip, roughly best-fit first:
 
 - **[Pexels](https://www.pexels.com/search/videos/dashcam/) /
   [Pixabay](https://pixabay.com/videos/search/dashcam/)** - free stock video,
-  clear licensing (no attribution required, safe to check in if you want),
-  short dashcam/driving clips, easy to download directly. Fastest path to a
-  real test clip.
-- **[comma2k9 / comma.ai research datasets](https://github.com/commaai)** -
-  real dashcam driving data released for research use, larger files.
-- **[BDD100K](https://www.bdd100k.com/)** and
-  **[KITTI](https://www.cvlibs.net/datasets/kitti/)** - the two datasets
-  `data/README.md` already calls out for later-stage work. Larger downloads,
-  annotated, require a (free) account/agreement for some splits - the right
-  choice once you're past smoke-testing and want to evaluate against
-  ground-truth labels.
+  no-attribution license, short dashcam clips, direct download. Fastest path
+  to something real.
+- **[comma.ai open datasets](https://github.com/commaai)** (e.g. comma2k19) -
+  real dashcam data released for research use, larger files.
+- **[BDD100K](https://www.bdd100k.com/)** / **[KITTI](https://www.cvlibs.net/datasets/kitti/)**
+  - already named in `data/README.md` for later-stage work. Larger,
+    annotated, needs a free account for some splits - the right choice once
+    you want ground-truth comparison, not just a smoke test.
 
-Whatever you use, `data/README.md` already asks for source/license/access
-date to be documented - worth doing right away so it doesn't get lost.
+Whatever you use, log the source/license/access date per `data/README.md`.
 
 ---
 
-## Next Steps
+## Next Steps (priority order)
 
-Rough priority order, though the two "still needs full testing" items below
-are probably the highest-value thing to spend time on before anything else,
-since almost nothing past the smoke tests in this handoff has been run
-against real footage.
-
-**1. Full testing & refinement against real video** - everything vision-side
-has only been run against one 5-frame synthetic clip. Needs real dashcam
-footage (see above) across multiple scenario types (construction, crash,
-pedestrian - mirroring the existing `data/test_scenes/` categories) before
-any of the reasoning/decision behavior can be trusted.
-
-**2. Try alternative vision models / providers** - `qwen2.5vl:7b` via Ollama
-was the first thing that was already available locally, not a considered
-choice. Worth comparing:
-- An API-based vision model (e.g. hosted GPT-4V/Claude-vision-class model)
-  instead of local Ollama, for a quality/latency/cost comparison.
-- Object-detection-first approaches like YOLO for a bounding-box object list
-  instead of (or feeding into) free-form VLM description.
-- Other small local VLMs if inference speed matters.
-
-**3. Decision layer tuning** (carried over from earlier iterations, still
-true post-vision):
-- Strengthen STOP enforcement rules
-- Improve mapping: hazard_severity → action
-- Reduce maintain_speed usage when hazards are present
-- Improve early-stage hazard response (pre-escalation behavior)
-
-**4. Evaluation framework** - compare system actions against human-labeled
-"correct" actions per scenario; measure correctness and safety, not just
-"does it run."
-
-**5. Confidence calibration** - multi-run agreement / uncertainty estimation
-across repeated runs of the same scene.
-
-**6. Smaller fixes**, lower priority but cheap to do whenever someone's in
-that file:
-- No retry/re-prompt when `vision_to_text.py` or `decision_extraction.py`
-  get back invalid JSON from the model - currently just raises.
-- `decision_extraction.py` doesn't validate that the returned `action` is
-  actually one of the values in `ACTIONS` - it trusts the model's compliance
-  with the prompt instructions.
-- History passed to `sst_reason()` is raw reasoning text, unsummarized -
-  fine for ~10 frames, would need condensing for longer sequences.
-- `test_file_name.py` is a fragile global-variable hack used by several
-  scripts' `__main__` blocks to pick a test file name - should be a CLI arg
-  or function parameter instead.
-- `run_scenario.py` hardcodes its output dir to `logs/04_full_test` - each
-  new iteration means manually bumping that path.
-- `communication_modes.py` (audience-specific explanations) was in the
-  original plan in `src/README.md` but was never built - low priority, the
-  Action + Explanation fields already cover the core loop.
-
-**7. Writeup** - most of the formal writeup still needs to happen. `docs/`
-exists for this (method drafts, figures, experiment tables - see
-`docs/README.md`) but is currently empty. The V1-V4 analysis in
-`logs/0N_full_test/analysis.md` and the results table in `README.md` are the
-existing raw material to draw from.
-
-**8. April test-case slides** - referenced as showing test cases clearly, but
-not present in this branch/worktree - add the file (`docs/` seems like the
-right home) and it can be linked from here and cross-referenced against the
-`logs/` results.
+1. **Fix the vision model's risk-interpretation gap** (see above). Ideas
+   from the v5 analysis: tighten `prompts/vision_scene_prompt.txt` to force
+   explicit hazard/path reasoning, or add a rule-based mapping layer between
+   raw vision output and the decision-facing scene JSON.
+2. **Test against more real video**, across scenario types (construction,
+   crash, pedestrian). Only one synthetic clip and one folder of crash
+   stills have been run so far.
+3. **Try alternative vision approaches** now that `qwen2.5vl:7b` is a known
+   baseline: an API-hosted vision model (GPT-4V/Claude-vision-class) for a
+   quality/cost comparison, YOLO for bounding-box object detection, or other
+   small local VLMs.
+4. **Decision layer tuning** (carried over from V1-V4): stronger STOP
+   enforcement, better hazard_severity → action mapping, less
+   `maintain_speed` under real hazards.
+5. **Evaluation framework** - compare system actions against human-labeled
+   "correct" actions, not just eyeballing logs.
+6. **Confidence calibration** - multi-run agreement / uncertainty estimation.
+7. **Small cleanup items**:
+   - No retry when the vision or decision model returns invalid JSON -
+     currently just raises.
+   - `decision_extraction.py` doesn't check the model's `action` is actually
+     one of `ACTIONS`.
+   - History passed to `sst_reason()` is raw text, unsummarized - fine now,
+     would need trimming for longer sequences.
+   - `test_file_name.py` is a global-variable hack for picking test
+     filenames - should be a CLI arg.
+   - `communication_modes.py` (audience-specific explanations) was planned
+     but never built - low priority, Action + Explanation already cover it.
+8. **Writeup** - most of the formal writeup still needs to happen. Test
+   cases from `SST_AprilUpdatePowerpoint.pdf` (repo root) and the V1-V5
+   analyses in `logs/*/analysis.md` are the raw material.
 
 ---
 
 ## Where to look
 
-- `README.md` - research framing, setup/run instructions, and the V1-V4
-  iteration history/results
-- `logs/0N_full_test/analysis.md` - per-version writeups of what changed and
-  what the model actually did (reasoning+decision only, pre-vision)
+- `README.md` - research framing, setup/run instructions, V1-V4 history
+- `logs/0N_full_test/analysis.md` - reasoning+decision only, pre-vision
+- `logs/05_vision_crash_test/analysis.md` - the vision risk-interpretation finding
 - `logs/pipeline_video_test/` - the video-based end-to-end run
 - `src/README.md` - script-by-script description
 - `data/README.md` - scene JSON schema and data sourcing notes

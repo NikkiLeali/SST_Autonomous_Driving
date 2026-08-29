@@ -56,11 +56,11 @@ gaps, and next steps.
 
 `Driving video → Frame extraction → Vision model (scene JSON) → SST Reasoning (LLM, evolving over frames) → Decision Extraction (LLM + rules) → Structured Output`
 
-`run_scenario.py` still exists as a lighter-weight harness that skips
-video/vision and runs reasoning + decision directly against hand-authored
-scene JSON in `data/test_scenes/` - that's what produced the V1-V4 results
-below, and it's still the fastest way to iterate on reasoning/decision
-prompts.
+`run_scenario.py` still exists as a lighter-weight harness for iterating on
+reasoning/decision prompts - originally against hand-authored scene JSON in
+`data/test_scenes/` (what produced the V1-V4 results below), since extended
+to also run vision + reasoning + decision directly against a folder of
+images. See `HANDOFF.md` for the latest on that.
 
 ### Key Design Choices
 

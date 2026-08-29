@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "Reducing speed increases reaction time and improves maneuverability in case of sudden changes or obstacles due to the construction zone and the presence of a stopped vehicle.",
+  "fallback": "Maintain a low speed and be prepared to stop if necessary"
+}

@@ -1,0 +1,6 @@
+{
+  "action": "stop",
+  "confidence": "high",
+  "intent": "To avoid potential collision with the construction barriers or stopped vehicle, it is necessary to stop in this high-risk situation.",
+  "fallback": "If stopping is not possible due to traffic conditions, the autonomous vehicle should slow down significantly and proceed very cautiously."
+}

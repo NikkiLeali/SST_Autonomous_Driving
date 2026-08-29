@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "The construction zone necessitates a cautious approach, so the system should slow down to maintain safety.",
+  "fallback": "If slowing down is not sufficient and the obstacles become more immediate or if the traffic density increases significantly, the system may need to merge into another lane or yield to other vehicles to maintain safety."
+}

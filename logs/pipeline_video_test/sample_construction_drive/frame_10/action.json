@@ -1,6 +1,6 @@
 {
-  "action": "slow_down",
+  "action": "stop",
   "confidence": "high",
-  "intent": "To create enough distance between the ego vehicle and the stopped vehicle, reducing the risk of collision if the stopped vehicle suddenly moves.",
-  "fallback": "Stop if slowing down does not seem to be sufficient to avoid a potential collision."
+  "intent": "To avoid a potential collision with the stationary vehicle in the construction zone and to ensure safe navigation through the constrained path.",
+  "fallback": "If stopping safely is not possible, prepare to slow down significantly and yield right of way to other vehicles or pedestrians before attempting to proceed cautiously."
 }

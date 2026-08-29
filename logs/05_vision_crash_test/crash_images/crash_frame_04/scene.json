@@ -1,0 +1,20 @@
+{
+  "scene_type": "construction_zone",
+  "frame_id": "1",
+  "road_type": "highway",
+  "hazard_severity": "high",
+  "hazard_proximity": "close",
+  "path_status": "partially_blocked",
+  "traffic_density": "medium",
+  "visibility": "good",
+  "key_objects": [
+    "orange_cones",
+    "stopped_vehicle",
+    "construction_barriers"
+  ],
+  "ego_vehicle_state": {
+    "speed": "low",
+    "lane_position": "center"
+  },
+  "brief_reasoning": "The scene is a construction zone with close proximity to construction barriers and a partially blocked path. The traffic density is medium, and the visibility is good. The ego vehicle should proceed with caution, maintaining a low speed and staying in the center lane to avoid any potential hazards."
+}

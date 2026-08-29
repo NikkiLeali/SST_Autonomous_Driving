@@ -1,0 +1,19 @@
+{
+  "scene_type": "highway",
+  "frame_id": "",
+  "road_type": "highway",
+  "hazard_severity": "medium",
+  "hazard_proximity": "medium",
+  "path_status": "clear",
+  "traffic_density": "medium",
+  "visibility": "good",
+  "key_objects": [
+    "Jeep",
+    "Cadillac"
+  ],
+  "ego_vehicle_state": {
+    "speed": "medium",
+    "lane_position": "center"
+  },
+  "brief_reasoning": "The scene is on a highway with moderate traffic density and visibility. The vehicles ahead are maintaining a safe distance, and the road appears clear. However, the medium hazard severity suggests potential for sudden braking or lane changes, so maintaining a safe following distance is crucial."
+}

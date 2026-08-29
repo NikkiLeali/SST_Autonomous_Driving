@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "medium",
+  "intent": "To ensure a safe following distance due to the construction zone and hazard proximity.",
+  "fallback": "Prepare to Stop if the situation worsens or if there is an imminent need to yield."
+}

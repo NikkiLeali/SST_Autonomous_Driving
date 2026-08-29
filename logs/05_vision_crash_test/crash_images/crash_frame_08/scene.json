@@ -1,0 +1,20 @@
+{
+  "scene_type": "construction_zone",
+  "frame_id": "1234567890",
+  "road_type": "highway",
+  "hazard_severity": "medium",
+  "hazard_proximity": "close",
+  "path_status": "partially_blocked",
+  "traffic_density": "medium",
+  "visibility": "good",
+  "key_objects": [
+    "orange_barrels",
+    "stopped_vehicle",
+    "debris"
+  ],
+  "ego_vehicle_state": {
+    "speed": "medium",
+    "lane_position": "right"
+  },
+  "brief_reasoning": "The scene shows a construction zone with debris and stopped vehicles, indicating a medium hazard. The ego vehicle should maintain a safe distance and be prepared to slow down or stop if necessary."
+}

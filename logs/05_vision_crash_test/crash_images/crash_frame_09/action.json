@@ -1,0 +1,6 @@
+{
+  "action": "slow_down",
+  "confidence": "high",
+  "intent": "To ensure a safe distance from potential hazards, maintaining control over the vehicle in case of sudden movements or obstacles.",
+  "fallback": "If slowing down proves insufficient to navigate the hazardous area safely, prepare for an emergency stop."
+}

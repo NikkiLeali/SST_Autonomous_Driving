@@ -1,0 +1,20 @@
+{
+  "scene_type": "construction_zone",
+  "frame_id": "",
+  "road_type": "highway",
+  "hazard_severity": "high",
+  "hazard_proximity": "close",
+  "path_status": "partially_blocked",
+  "traffic_density": "low",
+  "visibility": "good",
+  "key_objects": [
+    "orange_barrels",
+    "stopped_vehicle",
+    "debris"
+  ],
+  "ego_vehicle_state": {
+    "speed": "low",
+    "lane_position": "right"
+  },
+  "brief_reasoning": "The scene indicates a construction zone with debris and a stopped vehicle, posing a high hazard. The ego vehicle should proceed with caution, maintaining a low speed and staying in the right lane to avoid any potential obstacles."
+}
