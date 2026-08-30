@@ -53,12 +53,10 @@ summary.json) under `logs/pipeline_video_test/<video_name>/`.
   summary.
 - **`sst_reasoning.py`** - takes an optional `history` list of prior frames'
   reasoning, so it can build evidence across frames instead of re-deriving it
-  each time (the "brake lights -> cones -> blocked lane" behavior). Passing
-  no history keeps single-frame behavior unchanged.
+  each time. Passing no history keeps single-frame behavior unchanged.
 - **`run_pipeline.py`** - orchestrates video -> frames -> vision -> reasoning
   (with rolling history) -> decision, one frame at a time.
-- **`run_scenario.py`** - the lighter-weight test harness: runs
-  reasoning + decision against hand-authored scene JSON in
+- **`run_scenario.py`** - runs reasoning + decision against hand-authored scene JSON in
   `data/test_scenes/` (no vision call - what produced the V1-V4 results), and
   has also been extended to run vision + reasoning + decision directly
   against a folder of images (see `logs/05_vision_crash_test/`).
@@ -81,7 +79,7 @@ collision scene came back as `hazard_severity: medium` /
 `path_status: clear or partially_blocked` when it should have been
 `critical` / `blocked`. That under-reporting is what causes STOP to be
 delayed or skipped downstream. This is the single most important known gap
-right now - see Next Steps #1.
+right now (see Next Steps #1)
 
 ---
 
@@ -115,16 +113,20 @@ Whatever you use, log the source/license/access date per `data/README.md`.
    crash, pedestrian). Only one synthetic clip and one folder of crash
    stills have been run so far.
 3. **Try alternative vision approaches** now that `qwen2.5vl:7b` is a known
-   baseline: an API-hosted vision model (GPT-4V/Claude-vision-class) for a
+   baseline, an API-hosted vision model (GPT-4V/Claude-vision-class) for a
    quality/cost comparison, YOLO for bounding-box object detection, or other
    small local VLMs.
-4. **Decision layer tuning** (carried over from V1-V4): stronger STOP
-   enforcement, better hazard_severity → action mapping, less
+4. **Try alternative LLM for reasoning** the current LLM for the sst reasoning 
+    is `mistral:instruct`. Like #3, using an API-based LLM model (ChatGPT, Claude, etc.)
+    may output stronger reasoning results than mistral: instruct. Additionally, finetuning 
+    could be utilized.
+5. **Decision layer tuning** (carried over from V1-V4): stronger STOP
+   enforcement, better hazard_severity -> action mapping, less
    `maintain_speed` under real hazards.
-5. **Evaluation framework** - compare system actions against human-labeled
+6. **Evaluation framework** - compare system actions against human-labeled
    "correct" actions, not just eyeballing logs.
-6. **Confidence calibration** - multi-run agreement / uncertainty estimation.
-7. **Small cleanup items**:
+7. **Confidence calibration** - multi-run agreement / uncertainty estimation.
+8. **Small cleanup items**:
    - No retry when the vision or decision model returns invalid JSON -
      currently just raises.
    - `decision_extraction.py` doesn't check the model's `action` is actually
@@ -135,7 +137,7 @@ Whatever you use, log the source/license/access date per `data/README.md`.
      filenames - should be a CLI arg.
    - `communication_modes.py` (audience-specific explanations) was planned
      but never built - low priority, Action + Explanation already cover it.
-8. **Writeup** - most of the formal writeup still needs to happen. Test
+9. **Writeup** - most of the formal writeup still needs to happen. Test
    cases from `SST_AprilUpdatePowerpoint.pdf` (repo root) and the V1-V5
    analyses in `logs/*/analysis.md` are the raw material.
 
