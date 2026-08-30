@@ -1,5 +1,10 @@
 # SST Autonomous Driving — Project Summary
 
+## Motivation
+Safety Self-Talk (SST) starts from the idea that safe driving decisions develop over time rather than from one isolated image. A driver may first notice brake lights, then see cones, and only later realize that a lane is blocked. The SST patent describes this as an evolving internal safety assessment in which new evidence changes both the interpretation of the scene and the action that follows. This project asks whether an LLM can serve as a limited reasoning layer in that process. It is not being used to control a real vehicle; instead, it receives scene information, reasons about hazards and uncertainty, and recommends a small set of high-level actions.
+
+This fits into recent research work using language and vision-language models for autonomous driving. DriveGPT4, DriveVLM, DriveMLM, and Reason2Drive all connect visual driving information with explanation, reasoning, planning, or behavior selection. At the same time, reliability work such as DriveBench shows that VLMs can produce plausible driving answers without being fully grounded in the visual input. That concern is important for SST because a convincing explanation is not useful if the system misunderstood the scene.
+
 ## Connection to SST Patent
 
 This project directly implements the core idea of the SST (Safety Self-Talk) patent:
@@ -13,7 +18,7 @@ Patent principle:
 ## System Interpretation of SST
 
 The system operationalizes SST as:
-`Scene (structured state) → Self-Talk Reasoning (LLM) → Decision (LLM with constraints)`
+`Scene (structured state) -> Self-Talk Reasoning (LLM) -> Decision (LLM with constraints)`
 
 Key extension:
 - Reasoning is separated from decision
@@ -54,7 +59,7 @@ gaps, and next steps.
 
 ### Current Pipeline
 
-`Driving video → Frame extraction → Vision model (scene JSON) → SST Reasoning (LLM, evolving over frames) → Decision Extraction (LLM + rules) → Structured Output`
+`Driving video → Frame extraction -> Vision model (scene JSON) -> SST Reasoning (LLM, evolving over frames) -> Decision Extraction (LLM + rules) -> Structured Output`
 
 `run_scenario.py` still exists as a lighter-weight harness for iterating on
 reasoning/decision prompts - originally against hand-authored scene JSON in
@@ -123,10 +128,10 @@ Reasoning alone is insufficient without structured grounding.
 
 ---
 
-## TL;DR
+## Quick Summary
 
 - Implemented SST (self-talk) using LLMs for driving decisions
-- Built pipeline: video → frames → vision → reasoning → decision
+- Built pipeline: video -> frames -> vision -> reasoning -> decision
 - Major improvements came from:
   - structured scene inputs
   - decision constraints
